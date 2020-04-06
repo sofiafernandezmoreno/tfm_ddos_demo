@@ -1,0 +1,37 @@
+filebeat:
+  config.modules:
+    path: /usr/share/filebeat/modules.d/*.yml
+    reload.enabled: true
+
+  # List of prospectors to fetch data.
+  inputs:
+    # Each - is a prospector. Below are the prospector specific configurations
+    - type: log 
+      enabled: true
+      # Paths that should be crawled and fetched. Glob based paths.
+      # To fetch all ".log" files from a specific level of subdirectories
+      # /var/log/*/*.log can be used.
+      # For each file found under this path, a harvester is started.
+      # Make sure not file is defined twice as this can lead to unexpected behaviour.
+      paths:
+       # - /var/log/*.log
+         - /var/log/suricata/eve.json
+    -
+     paths:
+       - /var/www/html/wordpress/wp-content/debug.log
+     fields:
+       logzio_codec: plain
+       token: tWMKrePSAcfaBSTPKLZeEXGCeiVMpuHb
+     fields_under_root: true
+     ignore_older: 24h
+     document_type: WP
+    - type: container
+      paths:
+        - '/var/lib/docker/containers/*/*.log'
+
+  fields:
+    event.type: suricata
+
+output:
+  logstash:
+        hosts: ["logstash:5044"]

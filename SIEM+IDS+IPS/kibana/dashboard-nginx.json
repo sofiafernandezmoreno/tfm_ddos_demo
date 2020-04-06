@@ -1,0 +1,82 @@
+[
+    {
+      "_id": "NGINX",
+      "_type": "dashboard",
+      "_source": {
+        "title": "NGINX",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"col\":6,\"id\":\"NGINX_Cache_STATUS\",\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"NGINX_HOST_LIMIT_ERROR\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NGINX_MAP\",\"row\":3,\"size_x\":12,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"NGINX_Method\",\"row\":1,\"size_x\":2,\"size_y\":2,\"type\":\"visualization\"},{\"col\":3,\"id\":\"NGINX_Responce\",\"row\":1,\"size_x\":3,\"size_y\":2,\"type\":\"visualization\"}]",
+        "version": 1,
+        "timeRestore": false,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+        }
+      }
+    },
+    {
+      "_id": "NGINX_Cache_STATUS",
+      "_type": "visualization",
+      "_source": {
+        "title": "NGINX_Cache_STATUS",
+        "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"split\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"type: 'nginx'\",\"analyze_wildcard\":true}}}}],\"row\":true}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"nginx_cache_status.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "NGINX_HOST_LIMIT_ERROR",
+      "_type": "visualization",
+      "_source": {
+        "title": "NGINX_HOST_LIMIT_ERROR",
+        "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{},\"spyPerPage\":10},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"split\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"tags: 'nginx_error'\",\"analyze_wildcard\":true}}}}],\"row\":true}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"nginx_host.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "NGINX_MAP",
+      "_type": "visualization",
+      "_source": {
+        "title": "NGINX_MAP",
+        "visState": "{\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":false,\"heatMaxZoom\":16,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"addTooltip\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"mapZoom\":2,\"mapCenter\":[14.944784875088372,4.921875],\"precision\":2}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"split\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"type: 'nginx'\",\"analyze_wildcard\":true}}}}],\"row\":true}}],\"listeners\":{}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "NGINX_Method",
+      "_type": "visualization",
+      "_source": {
+        "title": "NGINX_Method",
+        "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"split\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"type: 'nginx'\",\"analyze_wildcard\":true}}}}],\"row\":true}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"method.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "NGINX_Responce",
+      "_type": "visualization",
+      "_source": {
+        "title": "NGINX_Responce",
+        "visState": "{\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"filters\",\"schema\":\"split\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"type: 'nginx'\",\"analyze_wildcard\":true}}}}],\"row\":true}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"response.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    }
+  ]

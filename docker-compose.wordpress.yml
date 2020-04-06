@@ -1,0 +1,68 @@
+version: '3.7'
+
+services:
+   wordpress:
+     container_name: wordpress
+     depends_on:
+       - wordpress_db
+     image: wordpress:latest
+     volumes:
+       - ./WORDPRESS/wp-content:/var/www/html/wp-content
+       - ./WORDPRESS/website/wp-config.php:/var/www/html/wp-config.php
+     restart: always
+     networks:
+       - tfm
+
+
+   reverse_proxy:
+    container_name: proxy_wordpress
+    image: nginx:alpine
+    ports:
+        - "443:443"
+    volumes:
+        - ./WORDPRESS/website/proxy_ssl.conf:/etc/nginx/nginx.conf
+        - ./WORDPRESS/website/cert.pem:/etc/nginx/cert.pem
+        - ./WORDPRESS/website/key.pem:/etc/nginx/key.pem
+    depends_on:
+        - wordpress
+    networks:
+        tfm:
+            ipv4_address: 192.168.2.56
+
+   wordpress_db:
+     container_name: db_wordpress
+     build:
+       context: ./WORDPRESS/mysql
+       dockerfile: Dockerfile-mysql
+     image: wordpress_db
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MYSQL_DATABASE: ${MYSQL_DATABASE}
+       MYSQL_USER: ${MYSQL_USER}
+       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+     networks:
+        - tfm
+
+   db_backup:
+     container_name: db_backup
+     depends_on:
+       - wordpress_db
+     build:
+       context: ./WORDPRESS/cronjob
+       dockerfile: Dockerfile-db-cronjob
+       args:
+         PASSWORD: ${MYSQL_PASSWORD}
+         DBNAME: ${MYSQL_DATABASE}
+         USERNAME: ${MYSQL_USER}
+     image: db_backup
+     volumes:
+       - /tmp/backups:/home
+     networks:
+       - tfm
+
+volumes:
+  db_data: {}
+

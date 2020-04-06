@@ -1,0 +1,124 @@
+[
+    {
+      "_id": "CakeSolutions-Dashboard-for-nginx-Logs",
+      "_type": "dashboard",
+      "_source": {
+        "title": "Cake Solutions Dashboard for Nginx Logs",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"col\":4,\"id\":\"Traffic-vs.-Location\",\"panelIndex\":2,\"row\":1,\"size_x\":9,\"size_y\":4,\"type\":\"visualization\"},{\"col\":5,\"id\":\"Total-Requests\",\"panelIndex\":6,\"row\":9,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Bytes-vs.-Time\",\"panelIndex\":7,\"row\":5,\"size_x\":12,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Nginx-Dashboard\",\"panelIndex\":8,\"row\":1,\"size_x\":3,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"a290e460-1214-11e7-bd86-c5a619f9e3cf\",\"panelIndex\":12,\"row\":9,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":9,\"id\":\"11f05e50-1218-11e7-8838-d73b548b10e6\",\"panelIndex\":13,\"row\":9,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"}]",
+        "optionsJSON": "{\"darkTheme\":true}",
+        "uiStateJSON": "{\"P-12\":{\"vis\":{\"legendOpen\":false}},\"P-13\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+        "version": 1,
+        "timeRestore": true,
+        "timeTo": "now",
+        "timeFrom": "now-24h",
+        "refreshInterval": {
+          "display": "Off",
+          "pause": false,
+          "value": 0
+        },
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+        }
+      }
+    },
+    {
+      "_id": "Nginx-Dashboard",
+      "_type": "visualization",
+      "_source": {
+        "title": "Nginx Dashboard",
+        "visState": "{\"title\":\"Nginx Dashboard\",\"type\":\"markdown\",\"params\":{\"markdown\":\"#### CakeSolutions Dashboard to view Nginx logs\\nThis Dashboard shows a couple of information that can be gleaned from your nginx logs based on a Sample Project I worked on.\\n\\n**Example visualizations in the dashboard include:**\\n* Number of total & unique visitors \\n* Map show web traffic from various locations\\n* Pie chart of traffic by operating systems\\n\\nFeel free to explore & modify the dashboards to your hearts content. Ask questions, test hypothesis, diagnose issues!\\n\\n**Happy exploration!!!**\"},\"aggs\":[],\"listeners\":{}}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "11f05e50-1218-11e7-8838-d73b548b10e6",
+      "_type": "visualization",
+      "_source": {
+        "title": "Requests",
+        "visState": "{\"title\":\"Requests\",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"request.keyword\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "a290e460-1214-11e7-bd86-c5a619f9e3cf",
+      "_type": "visualization",
+      "_source": {
+        "title": "Response Code",
+        "visState": "{\"title\":\"Response Code\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"response\",\"interval\":20,\"extended_bounds\":{}}}],\"listeners\":{}}",
+        "uiStateJSON": "{\"vis\":{\"colors\":{\"200\":\"#7EB26D\",\"300\":\"#EAB839\",\"500\":\"#BF1B00\"}}}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "Traffic-vs.-Location",
+      "_type": "visualization",
+      "_source": {
+        "title": "Traffic vs. Location",
+        "visState": "{\"type\":\"tile_map\",\"params\":{\"mapType\":\"Scaled Circle Markers\",\"isDesaturated\":true,\"heatMaxZoom\":16,\"heatMinOpacity\":0.1,\"heatRadius\":25,\"heatBlur\":15,\"heatNormalizeData\":true,\"addTooltip\":true},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"geohash_grid\",\"schema\":\"segment\",\"params\":{\"field\":\"geoip.location\",\"autoPrecision\":true,\"mapZoom\":2,\"mapCenter\":[11.523087506868514,9.4921875],\"precision\":2}}],\"listeners\":{},\"title\":\"Traffic vs. Location\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "Bytes-vs.-Time",
+      "_type": "visualization",
+      "_source": {
+        "title": "Bytes vs. Time",
+        "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"bytes\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{},\"title\":\"Bytes vs. Time\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "Total-Requests",
+      "_type": "visualization",
+      "_source": {
+        "title": "Total Number of Logs",
+        "visState": "{\"title\":\"Total Number of Logs\",\"type\":\"metric\",\"params\":{\"fontSize\":\"75\",\"spyPerPage\":10,\"handleNoResults\":true},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    },
+    {
+      "_id": "6d2aee40-1216-11e7-bd86-c5a619f9e3cf",
+      "_type": "visualization",
+      "_source": {
+        "title": "Log Count",
+        "visState": "{\"title\":\"Log Count\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"index\":\"logstash-nginx-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+        }
+      }
+    }
+  ]

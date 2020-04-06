@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    waf:
+        container_name: waf
+        build: WAF
+        ports:
+            - "80:80"
+        networks:
+            tfm:
+                ipv4_address: 192.168.2.66
