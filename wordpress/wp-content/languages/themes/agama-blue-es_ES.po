@@ -1,0 +1,72 @@
+# Translation of Themes - Agama Blue in Spanish (Spain)
+# This file is distributed under the same license as the Themes - Agama Blue package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-07-17 18:52:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Themes - Agama Blue\n"
+
+#. Description of the theme
+msgid "Agama Blue is child theme of Agama. Powered by Bootstrap 4 framework. Check demo: http://demo.theme-vision.com/"
+msgstr "Agama Blue es un tema hijo de Agama. Funciona con el framerwork Bootstrap 4. Échale un vistazo a a la demo: http://demo.theme-vision.com/"
+
+#. Theme Name of the theme
+msgid "Agama Blue"
+msgstr "Agama Blue"
+
+#: index.php:64
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Publicaciones recientes <span class=\"meta-nav\">&rarr;</span>"
+
+#: index.php:61
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Publicaciones anteriores"
+
+#: index.php:59
+msgid "Post navigation"
+msgstr "Navegación de entradas"
+
+#: includes/customizer.php:45
+msgid "Set blog section heading title."
+msgstr "Configura el título del encabezado de la sección blog."
+
+#: includes/customizer.php:36
+msgid "Enable"
+msgstr "Activar"
+
+#: includes/customizer.php:44
+msgid "Heading Title"
+msgstr "Título del encabezado"
+
+#: includes/customizer.php:32
+msgid "Blog"
+msgstr "Blog"
+
+#: includes/customizer.php:28
+msgid "Agama Blue Options"
+msgstr "Opciones de Agama Blue"
+
+#: includes/customizer.php:37
+msgid "Enable blog section on home page."
+msgstr "Activar blog en la página de inicio"
+
+#: index.php:24 includes/customizer.php:49
+msgid "Latest from the Blog"
+msgstr "Lo último en el blog"
+
+#. Author of the theme
+msgid "ThemeVision"
+msgstr "ThemeVision"
+
+#. Author URI of the theme
+msgid "http://www.theme-vision.com/"
+msgstr "http://www.theme-vision.com/"
+
+#. Theme URI of the theme
+msgid "http://www.theme-vision.com/agama-blue/"
+msgstr "http://www.theme-vision.com/agama-blue/"
