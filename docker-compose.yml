@@ -19,9 +19,9 @@ services:
     image: wordpress:latest
     container_name: wordpress
     volumes:
-      - "./wordpress/wp-content:/var/www/html/wp-content"
-      - "./wordpress/wp-admin:/var/www/html/wp-admin"
-      - "./wordpress/wp-includes:/var/www/html/wp-includes"
+      - "wordpress/wp-content:/var/www/html/wp-content"
+      - "wordpress/wp-admin:/var/www/html/wp-admin"
+      - "wordpress/wp-includes:/var/www/html/wp-includes"
     ports:
       - "80:80"
     restart: always
