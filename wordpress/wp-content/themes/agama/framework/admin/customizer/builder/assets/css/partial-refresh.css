@@ -1,0 +1,52 @@
+/* Logo */
+.customize-partial-edit-shortcut-agama_logo button {
+    top: 25px;
+    left: -20px;
+}
+#masthead.shrinked .customize-partial-edit-shortcut-agama_logo button {
+    top: 13px;
+}
+
+/* Slider */
+.customize-partial-edit-shortcut-agama_slider_title_1 button,
+.customize-partial-edit-shortcut-agama_slider_title_2 button {
+    top: 7px;
+    left: -40px;
+}
+.customize-partial-edit-shortcut-agama_slider_button_title_1 button,
+.customize-partial-edit-shortcut-agama_slider_button_title_2 button {
+    top: 7px;
+    left: -75px;
+}
+
+/* Front Page Box 1 */
+.customize-partial-edit-shortcut-agama_frontpage_box_1_icon button,
+.customize-partial-edit-shortcut-agama_frontpage_box_2_icon button,
+.customize-partial-edit-shortcut-agama_frontpage_box_3_icon button,
+.customize-partial-edit-shortcut-agama_frontpage_box_4_icon button {
+    top: 10px;
+    left: -75px;
+}
+.customize-partial-edit-shortcut-agama_frontpage_box_1_title button,
+.customize-partial-edit-shortcut-agama_frontpage_box_2_title button,
+.customize-partial-edit-shortcut-agama_frontpage_box_3_title button,
+.customize-partial-edit-shortcut-agama_frontpage_box_4_title button {
+    top: -10px;
+    left: -40px;
+}
+.customize-partial-edit-shortcut-agama_frontpage_box_1_text button,
+.customize-partial-edit-shortcut-agama_frontpage_box_2_text button,
+.customize-partial-edit-shortcut-agama_frontpage_box_3_text button,
+.customize-partial-edit-shortcut-agama_frontpage_box_4_text button {
+    top: 0;
+    left: -40px;
+}
+
+/* Footer Area */
+.customize-partial-edit-shortcut-agama_footer_copyright button {
+    top: -10px;
+    left: -45px;
+}
+.customize-partial-edit-shortcut-agama_footer_social button {
+    top: -10px;
+}

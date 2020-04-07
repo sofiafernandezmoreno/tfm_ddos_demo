@@ -1,0 +1,83 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Agama Blue\n"
+"POT-Creation-Date: 2018-08-21 22:32+0200\n"
+"PO-Revision-Date: 2015-11-28 23:02+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/customizer.php:28
+msgid "Agama Blue Options"
+msgstr ""
+
+#: includes/customizer.php:32
+msgid "Blog"
+msgstr ""
+
+#: includes/customizer.php:36
+msgid "Enable"
+msgstr ""
+
+#: includes/customizer.php:37
+msgid "Enable blog section on home page."
+msgstr ""
+
+#: includes/customizer.php:44
+msgid "Heading Title"
+msgstr ""
+
+#: includes/customizer.php:45
+msgid "Set blog section heading title."
+msgstr ""
+
+#: includes/customizer.php:49 index.php:24
+msgid "Latest from the Blog"
+msgstr ""
+
+#: index.php:59
+msgid "Post navigation"
+msgstr ""
+
+#: index.php:61
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: index.php:64
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Agama Blue"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://www.theme-vision.com/agama-blue/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Agama Blue is child theme of Agama. Check demo: http://demo.theme-vision."
+"com/"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "ThemeVision"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.theme-vision.com/"
+msgstr ""
