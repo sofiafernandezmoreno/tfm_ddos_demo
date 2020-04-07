@@ -5,7 +5,7 @@ services:
     container_name: db
     volumes:
       - db_data:/var/lib/mysql
-    restart: unless-stopped
+    restart: always
     env_file: .env
     environment:
       MYSQL_DATABASE: wordpress
@@ -22,7 +22,7 @@ services:
       - wordpress:/var/www/html
     ports:
       - "80:80"
-    restart: unless-stopped
+    restart: always
     env_file: .env
     environment:
         WORDPRESS_DB_HOST: db:3306
@@ -36,7 +36,7 @@ services:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
-    restart: unless-stopped
+    restart: always
     env_file: .env
     ports:
       - '8080:80'

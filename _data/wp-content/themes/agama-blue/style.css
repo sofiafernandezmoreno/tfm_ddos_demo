@@ -1,0 +1,258 @@
+/*
+Theme Name: Agama Blue
+Theme URI: http://www.theme-vision.com/agama-blue/
+Description: Agama Blue is child theme of Agama. Powered by Bootstrap 4 framework. Check demo: http://demo.theme-vision.com/
+Version: 1.1.1
+Author: ThemeVision
+Author URI: http://www.theme-vision.com/
+Template: agama
+Template Version: 1.4.4
+Tags: one-column, two-columns, right-sidebar, left-sidebar, grid-layout, flexible-header, accessibility-ready, buddypress, custom-background, custom-header, custom-logo, custom-menu, custom-colors, editor-style, featured-image-header, featured-images, full-width-template, footer-widgets, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, education, entertainment, holiday
+Text Domain: agama-blue
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+body.home.blog .vision-row {
+    padding-top: 0;
+}
+
+.center { text-align: center !important; }
+
+/* Navigations Global
+ *----------------------------------------------*/
+ nav[role="navigation"] a, 
+ a[rel="next"], 
+ a[rel="prev"] { 
+	font-family: 'Roboto Condensed', sans-serif; 
+	font-size: 15px !important;
+	font-weight: 700;
+}
+
+/* Sticky Navigation
+ *----------------------------------------------*/
+ .site-header .sticky-header nav a { color: #00a4d0; }
+ 
+ /* Heading Block - with Subtitle
+  *----------------------------------------------*/
+.heading-block { margin-bottom: 50px; }
+.heading-block h1,
+.heading-block h2,
+.heading-block h3,
+.heading-block h4,
+.emphasis-title h1,
+.emphasis-title h2 {
+	margin-bottom: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #333;
+}
+.emphasis-title h1,
+.emphasis-title h2 {
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+}
+.heading-block h1 { font-size: 32px; }
+.heading-block h2 { font-size: 30px; }
+.heading-block h3 { font-size: 26px; }
+.heading-block h4 {
+	font-size: 20px;
+	font-weight: 700;
+}
+.heading-block > span:not(.before-heading) {
+	display: block;
+	margin-top: 10px;
+	font-weight: 300;
+	color: #777;
+}
+.heading-block .before-heading { margin-bottom: 7px; }
+.heading-block.center > span,
+.heading-block.title-center > span,
+.center .heading-block > span {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.heading-block h1 + span { font-size: 24px; }
+.heading-block h2 + span { font-size: 22px; }
+.heading-block h3 + span,
+.heading-block h4 + span { font-size: 20px; }
+.heading-block ~ p:not(.lead) { font-size: 15px; }
+.heading-block:after {
+	content: '';
+	display: block;
+	margin-top: 30px;
+	width: 40px;
+	border-top: 2px solid #444;
+}
+.center .heading-block:after,
+.heading-block.center:after,
+.heading-block.title-center:after { margin: 30px auto 0; }
+.heading-block.noborder:after,
+.heading-block.nobottomborder:after { display: none; }
+.heading-block.border-color:after { border-color: #1ABC9C; }
+
+/* Blog
+ *----------------------------------------------*/
+.section-blog {
+    position: absolute;
+    margin: 0;
+    padding: 60px 0;
+    background-color: #F9F9F9;
+    overflow: hidden;
+	left: 0;
+	width: 100%;
+	height: 178px;
+}
+.container-blog { 
+	margin-top: 230px; 
+	margin-bottom: 50px; 
+}
+.container-blog .article-wrapper {
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+}
+.container-blog .more-link {
+	margin-top: 20px;
+}
+#posts { position: relative; }
+.entry {
+	position: relative;
+	margin: 0 0 50px;
+	padding: 0 0 50px;
+	border-bottom: 2px solid #F5F5F5;
+}
+.entry-image { margin-bottom: 30px; }
+.entry-image,
+.entry-image > a,
+.entry-image .slide a,
+.entry-image img {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.entry-image iframe { display: block; }
+.entry-image img { border-radius: 3px; }
+.entry-title h2 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.entry-title h2 a { color: #333; }
+.entry-title h2 a:hover { color: #1ABC9C; }
+.entry-meta {
+	margin: 10px -10px -15px 0;
+	list-style: none;
+}
+.single-post .entry-meta { margin-bottom: 20px; }
+.entry-meta li {
+	float: left;
+	font-size: 13px;
+	line-height: 14px;
+	margin: 0 10px 15px 0;
+	color: #999;
+	font-family: 'Crete Round', serif;
+	font-style: italic;
+}
+.entry-meta li:before {
+	content: '/';
+	display: inline-block;
+	margin-right: 10px;
+	opacity: 0.5
+}
+.entry-meta li i {
+	position: relative;
+	top: 1px;
+	font-size: 14px;
+	margin-right: 3px;
+}
+.entry-meta li a { color: #999; }
+.entry-meta li:first-child:before { display: none; }
+.entry-meta li ins {
+	font-weight: 600;
+	text-decoration: none;
+}
+.entry-c {
+	position: relative;
+	overflow: hidden;
+}
+#posts .entry-content { margin-top: 30px; }
+.single-post .entry-content .entry-image { max-width: 350px; }
+.entry-content { position: relative; }
+.entry-link {
+	display: block;
+	background-color: #F5F5F5;
+	padding: 30px 0;
+	text-align: center;
+	color: #444;
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 24px;
+	font-weight: 700;
+	border-radius: 3px;
+}
+body:not(.device-touch) .entry-link {
+	-webkit-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	transition: background-color .3s ease-in-out;
+}
+.entry-link:hover {
+	color: #FFF;
+	background-color: #1ABC9C;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+.entry-link span {
+	display: block;
+	margin-top: 5px;
+	font-family: 'Crete Round', serif;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 14px;
+	color: #AAA;
+}
+.entry-link:hover span { color: #EEE; }
+.entry blockquote p {
+	font-weight: 400;
+	font-family: 'Crete Round', serif;
+	font-style: italic;
+}
+.container-blog #nav-below {
+    margin: 0;
+}
+#nav-below {
+    margin-top: 30px;
+}
+ 
+/* Individual Post
+ *----------------------------------------------*/
+.ipost { margin-bottom: 40px; }
+.ipost .entry-image img { 
+	border-radius: 0; 
+	width: 262.5px;
+	height: 197px;
+}
+.ipost .entry-title h3,
+.ipost .entry-title h4 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	height: 30px;
+}
+.ipost .entry-title h4 { font-size: 15px; }
+.ipost .entry-title h3 a,
+.ipost .entry-title h4 a { color: #333; }
+.ipost .entry-meta { margin-right: -10px; }
+.ipost .entry-meta li {
+	font-size: 13px;
+	margin-right: 10px;
+}
+.ipost .entry-content { margin-top: 20px; }
+.ipost .entry-content p { margin-bottom: 0; }

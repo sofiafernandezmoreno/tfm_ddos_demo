@@ -1,0 +1,69 @@
+#agama-widgets-selector {
+    width: 100%;
+    margin: 0;
+}
+#agama-widgets-selector li {
+    display: inline-block;
+    width: 50%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eee;
+}
+#agama-widgets-selector li.active {
+    background-color: #fff;
+}
+#agama-widgets-selector li.active span {
+    color: #333;
+}
+#agama-widgets-selector li span {
+    color: #777;
+    font-weight: bold;
+}
+#available-widgets .agama-widgets-wrapper .pro-widget {
+    border-left-color: rgba(40, 43, 50, .85);
+    display: block !important;
+}
+#available-widgets .agama-widgets-wrapper .pro-widget .widget-overlay {
+    font-weight: 600;
+    background-color: #282B32;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #B9BAC5;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .90;
+    z-index: 1;
+}
+#available-widgets .agama-widgets-wrapper .pro-widget:hover .widget-overlay {
+    display: flex;
+}
+#available-widgets .other-widgets-wrapper {
+    display: none;
+}
+#available-widgets .agama_widget_about-4 .widget-title:before {
+    content: '\f134';
+}
+#widget-tpl-agama-testimonial-1 .widget-title:before {
+    content: '\f110';
+}
+#widget-tpl-agama-portfolio-1 .widget-title:before {
+    content: '\f128';
+}
+#widget-tpl-agama-countdown-1 .widget-title:before {
+    content: '\f469';
+}
+#widget-tpl-agama-maps-1 .widget-title:before {
+    content: '\f231';
+}
+#widget-tpl-agama-contact-1 .widget-title:before {
+    content: '\f466';
+}
