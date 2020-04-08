@@ -4,9 +4,11 @@ services:
     image: mysql:5.7
     container_name: db
     volumes:
-      - db_data:/var/lib/mysql
-    restart: always
+      - ./db_data:/var/lib/mysql
+    command: '--default-authentication-plugin=mysql_native_password'
     env_file: .env
+    ports:
+      - '3306:3306'
     environment:
       MYSQL_DATABASE: wordpress
     networks:
@@ -19,12 +21,10 @@ services:
     image: wordpress:latest
     container_name: wordpress
     volumes:
-      - "./wordpress/wp-content:/var/www/html/wp-content"
-      - "./wordpress/wp-admin:/var/www/html/wp-admin"
-      - "./wordpress/wp-includes:/var/www/html/wp-includes"
+      - ./wordpress:/var/www/html   
     ports:
-      - "80:80"
-    restart: always
+      - "9000:9000"
+    
     env_file: .env
     environment:
         WORDPRESS_DB_HOST: db:3306
@@ -38,7 +38,7 @@ services:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
-    restart: always
+    
     env_file: .env
     ports:
       - '8080:80'
@@ -48,9 +48,28 @@ services:
     networks:
       - wordpress-network
 
+  webserver:
+    depends_on:
+      - wordpress
+    image: nginx:1.15.12-alpine
+    container_name: webserver
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+      - ./wordpress:/var/www/html
+    networks:
+      - wordpress-network
+ 
+
+
+
+
 volumes:
   wordpress:
   db_data:
+  certbot-etc:
 networks:
   wordpress-network:
     driver: bridge 
