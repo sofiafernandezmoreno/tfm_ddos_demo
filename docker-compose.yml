@@ -28,7 +28,7 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
   nginx:
-    image: openresty/openresty:1.13.6.1-2-centos
+    image: openresty/openresty:1.15.8.3-1-centos
     container_name: webserver
     restart: always
     networks:
