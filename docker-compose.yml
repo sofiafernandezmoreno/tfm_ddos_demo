@@ -28,7 +28,7 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
   nginx:
-    image: openresty/openresty:centos
+    image: openresty/openresty:1.13.6.1-2-centos
     container_name: webserver
     restart: always
     networks:
@@ -43,6 +43,7 @@ services:
       - wordpress-data:/var/www/html
       - nginx-data:/usr/share/nginx/html
       - ./logs/nginx:/var/log/nginx
+      - ./geoip:/usr/local/share/GeoIP
     depends_on:
       - wordpress
 
