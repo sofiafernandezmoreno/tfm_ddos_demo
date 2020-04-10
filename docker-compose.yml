@@ -28,7 +28,8 @@ services:
     environment:
       MYSQL_DATABASE: wordpress
   nginx:
-    image: nginx
+    build: ./openresty
+    container_name: webserver
     restart: always
     networks:
       - wordpress
@@ -36,6 +37,8 @@ services:
       - 80:80
       - 443:443
     volumes:
+      - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - wordpress-data:/var/www/html
       - nginx-data:/usr/share/nginx/html
