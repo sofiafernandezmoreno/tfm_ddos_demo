@@ -43,7 +43,7 @@ services:
       - wordpress-data:/var/www/html
       - nginx-data:/usr/share/nginx/html
       - ./logs/nginx:/var/log/nginx
-      - ./geoip:/usr/local/share/GeoIP
+      - ./geoip:/usr/share/GeoIP
     depends_on:
       - wordpress
 
