@@ -27,7 +27,7 @@ ARG RESTY_CONFIG_OPTIONS="\
     --with-http_auth_request_module \
     --with-http_dav_module \
     --with-http_flv_module \
-    --with-http_geoip_module=dynamic \
+    --with-ngx_http_geoip2_module=dynamic \
     --with-http_gunzip_module \
     --with-http_gzip_static_module \
     --with-http_image_filter_module=dynamic \
@@ -116,6 +116,17 @@ RUN apk add --no-cache --virtual .build-deps \
     && echo https://github.com/vozlt/nginx-module-stream-sts/archive/v${NGINX_MODULE_STREAM_STS_VERSION}.zip \
     && curl -sfSL https://github.com/vozlt/nginx-module-stream-sts/archive/v${NGINX_MODULE_STREAM_STS_VERSION}.zip -o nginx-module-stream-sts.zip \
     && unzip -qq nginx-module-stream-sts.zip \
+    #geoip2
+    && git clone --recursive https://github.com/maxmind/libmaxminddb.git \
+    && git clone --recursive https://github.com/leev/ngx_http_geoip2_module.git \
+    && mkdir -p /usr/src \
+    && tar -zxC /usr/src -f nginx.tar.gz \
+    && rm nginx.tar.gz \
+    #geoip2
+    && cp -r ./libmaxminddb /usr/src \
+    && cp -r ./ngx_http_geoip2_module /usr/src \
+    && rm -rf libmaxminddb \
+    && rm -rf ngx_http_geoip2_module \
     && curl -fSL "${RESTY_OPENSSL_URL_BASE}/openssl-${RESTY_OPENSSL_VERSION}.tar.gz" -o openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
     && tar xzf openssl-${RESTY_OPENSSL_VERSION}.tar.gz \
     && cd openssl-${RESTY_OPENSSL_VERSION} \
