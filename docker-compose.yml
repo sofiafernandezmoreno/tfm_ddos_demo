@@ -38,7 +38,11 @@ services:
       - 443:443
     volumes:
       - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./nginx/proxy.conf:/etc/nginx/conf.d/proxy.conf
+      - ./nginx/fastcgi_params2:/etc/nginx/conf.d/fastcgi_params2
+      - ./nginx/GeoIP.conf:/etc/nginx/conf.d/GeoIP.conf
       - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
+      - ./nginx/maxmindb.lua:/usr/local/openresty/nginx/maxmindb.lua
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - wordpress-data:/var/www/html
       - nginx-data:/usr/share/nginx/html
