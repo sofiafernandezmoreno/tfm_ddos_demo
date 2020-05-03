@@ -1,0 +1,3 @@
+gcc -o udpspoofing udpspoofing.c -pthread
+./udpspoofing <target IP/hostname> <port to be flooded> <throttle (lower is faster)> <number threads to use> <time (optional)>
+./udpspoofing 127.0.0.1 80 1 3600

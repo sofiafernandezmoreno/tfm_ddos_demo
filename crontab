@@ -1,5 +1,0 @@
-# top of crontab
-MAILTO=chui274@gmail.com
-
-25 20 * * 6 /usr/local/bin/geoipupdate
-# end of crontab
