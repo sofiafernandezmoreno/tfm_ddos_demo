@@ -55,7 +55,7 @@ services:
     image: jasonish/suricata:latest
     container_name: suricata
     command:
-      - '-i br-9f57429ba6d7'
+      - '-i br-56052cd8f30d'
     cap_add:
       - NET_ADMIN
       - SYS_NICE
@@ -72,6 +72,7 @@ services:
       - ./suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
       - ./suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
       - ./var/log/suricata:/var/log/suricata
+      
   nginx:
     build: ./openresty
     container_name: webserver
@@ -84,6 +85,7 @@ services:
       - 443:443
     volumes:
       - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./nginx/modsecurity_rules.conf:/usr/local/openresty/nginx/modsec/modsecurity_rules.conf
       - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - wordpress-data:/var/www/html
@@ -98,8 +100,6 @@ volumes:
   wordpress-data:
   database-data:
   nginx-data:
-
-
 networks:
   wordpress:
     driver: bridge
