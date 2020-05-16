@@ -7,7 +7,8 @@ services:
     restart: always
     env_file: .env
     networks:
-      - wordpress
+      wordpress:
+        ipv4_address: 192.168.56.103
     volumes:
       - wordpress-data:/var/www/html
     environment:
@@ -23,17 +24,40 @@ services:
     restart: always
     env_file: .env
     networks:
-      - wordpress
+      wordpress:
+        ipv4_address: 192.168.56.109
     volumes:
       - database-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: wordpress
+  suricata:
+    image: jasonish/suricata:latest
+    container_name: suricata
+    command:
+      - '-i eth0'
+    cap_add:
+      - NET_ADMIN
+      - SYS_NICE
+      - NET_RAW
+    network_mode: "host"
+    volumes:
+      - ./suricata/etc/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./suricata/etc/classification.config:/etc/suricata/classification.config
+      - ./suricata/etc/reference.config:/etc/suricata/reference.config
+      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
+      - ./suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
+      - ./suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
+      - ./suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
+      - ./suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
+      - ./suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
+      - ./var/log/suricata:/var/log/suricata
   nginx:
     build: ./openresty
     container_name: webserver
     restart: always
     networks:
-      - wordpress
+      wordpress:
+        ipv4_address: 192.168.56.106
     ports:
       - 80:80
       - 443:443
@@ -57,5 +81,7 @@ volumes:
 
 networks:
   wordpress:
-    driver: bridge
-    name: wordpress
+    ipam: 
+      driver: default
+      config:
+        - subnet: 192.168.56.0/24 

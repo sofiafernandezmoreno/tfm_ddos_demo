@@ -1,0 +1,22 @@
+15/5/2020 -- 20:41:42 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+15/5/2020 -- 20:41:42 - <Info> - CPUs/cores online: 8
+15/5/2020 -- 20:41:42 - <Info> - Found an MTU of 1500 for 'eth0'
+15/5/2020 -- 20:41:42 - <Info> - Found an MTU of 1500 for 'eth0'
+15/5/2020 -- 20:41:42 - <Info> - dropped the caps for main thread
+15/5/2020 -- 20:41:42 - <Info> - fast output device (regular) initialized: fast.log
+15/5/2020 -- 20:41:42 - <Info> - eve-log output device (regular) initialized: eve.json
+15/5/2020 -- 20:41:42 - <Info> - stats output device (regular) initialized: stats.log
+15/5/2020 -- 20:41:42 - <Info> - Running in live mode, activating unix socket
+15/5/2020 -- 20:41:46 - <Info> - 1 rule files processed. 20316 rules successfully loaded, 0 rules failed
+15/5/2020 -- 20:41:46 - <Info> - Threshold config parsed: 0 rule(s) found
+15/5/2020 -- 20:41:46 - <Info> - 20319 signatures processed. 1125 are IP-only rules, 3951 are inspecting packet payload, 15013 inspect application layer, 103 are decoder event only
+15/5/2020 -- 20:42:01 - <Info> - Going to use 8 thread(s)
+15/5/2020 -- 20:42:01 - <Info> - Running in live mode, activating unix socket
+15/5/2020 -- 20:42:01 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+15/5/2020 -- 20:42:01 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+15/5/2020 -- 20:42:01 - <Info> - All AFP capture threads are running.
+15/5/2020 -- 20:43:21 - <Notice> - Signal Received.  Stopping engine.
+15/5/2020 -- 20:43:21 - <Info> - time elapsed 80.524s
+15/5/2020 -- 20:43:21 - <Info> - Alerts: 2
+15/5/2020 -- 20:43:22 - <Info> - cleaning up signature grouping structure... complete
+15/5/2020 -- 20:43:22 - <Notice> - Stats for 'eth0':  pkts: 6824, drop: 0 (0.00%), invalid chksum: 0
