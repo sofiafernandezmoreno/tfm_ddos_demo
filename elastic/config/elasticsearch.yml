@@ -1,0 +1,6 @@
+cluster.name: "docker-cluster"
+node.name: "elastic-01"
+http.host: 0.0.0.0
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+xpack.security.enabled: false
