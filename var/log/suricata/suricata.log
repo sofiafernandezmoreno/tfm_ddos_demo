@@ -1,312 +1,209 @@
-16/5/2020 -- 08:15:50 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 08:15:50 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 08:15:50 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 08:15:50 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 08:15:50 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 08:15:50 - <Info> - dropped the caps for main thread
-16/5/2020 -- 08:15:50 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 08:15:50 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 08:15:50 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 08:15:50 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 08:15:55 - <Info> - 1 rule files processed. 20316 rules successfully loaded, 0 rules failed
-16/5/2020 -- 08:15:55 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 08:15:55 - <Info> - 20319 signatures processed. 1125 are IP-only rules, 3951 are inspecting packet payload, 15013 inspect application layer, 103 are decoder event only
-16/5/2020 -- 08:16:12 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 08:16:12 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 08:16:12 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 08:16:12 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 08:16:12 - <Info> - All AFP capture threads are running.
-16/5/2020 -- 08:20:50 - <Notice> - Signal Received.  Stopping engine.
-16/5/2020 -- 08:20:50 - <Info> - time elapsed 278.440s
-16/5/2020 -- 08:20:50 - <Info> - Alerts: 0
-16/5/2020 -- 08:20:51 - <Info> - cleaning up signature grouping structure... complete
-16/5/2020 -- 08:20:51 - <Notice> - Stats for 'br-9f57429ba6d7':  pkts: 166, drop: 0 (0.00%), invalid chksum: 0
-16/5/2020 -- 08:29:23 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 08:29:23 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 08:29:23 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 08:29:23 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 08:29:23 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 08:29:23 - <Info> - dropped the caps for main thread
-16/5/2020 -- 08:29:23 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 08:29:23 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 08:29:23 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 08:29:23 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 08:29:27 - <Info> - 1 rule files processed. 20316 rules successfully loaded, 0 rules failed
-16/5/2020 -- 08:29:27 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 08:29:27 - <Info> - 20319 signatures processed. 1125 are IP-only rules, 3951 are inspecting packet payload, 15013 inspect application layer, 103 are decoder event only
-16/5/2020 -- 08:29:43 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 08:29:43 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 08:29:43 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 08:29:43 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 08:29:44 - <Info> - All AFP capture threads are running.
-16/5/2020 -- 17:31:58 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 17:31:58 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 17:31:58 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 17:31:58 - <Info> - Found an MTU of 1500 for 'br-9f57429ba6d7'
-16/5/2020 -- 17:31:59 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 17:31:59 - <Info> - dropped the caps for main thread
-16/5/2020 -- 17:31:59 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 17:31:59 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 17:31:59 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 17:31:59 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 17:32:03 - <Info> - 1 rule files processed. 20316 rules successfully loaded, 0 rules failed
-16/5/2020 -- 17:32:03 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 17:32:03 - <Info> - 20319 signatures processed. 1125 are IP-only rules, 3951 are inspecting packet payload, 15013 inspect application layer, 103 are decoder event only
-16/5/2020 -- 17:32:17 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 17:32:17 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 17:32:17 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 17:32:17 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 17:32:17 - <Info> - All AFP capture threads are running.
-16/5/2020 -- 17:52:21 - <Notice> - Signal Received.  Stopping engine.
-16/5/2020 -- 17:52:21 - <Info> - time elapsed 1204.100s
-16/5/2020 -- 17:52:21 - <Info> - Alerts: 255
-16/5/2020 -- 17:52:22 - <Info> - cleaning up signature grouping structure... complete
-16/5/2020 -- 17:52:22 - <Notice> - Stats for 'br-9f57429ba6d7':  pkts: 19750, drop: 0 (0.00%), invalid chksum: 0
-16/5/2020 -- 18:20:18 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:20:18 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:20:19 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:20:19 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:20:19 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:20:19 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:20:19 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:20:19 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:20:19 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:20:19 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:20:23 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:20:23 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:20:23 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:20:41 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:20:41 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:20:41 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:20:41 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:20:41 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:20:41 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:20:41 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:20:41 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 18:22:37 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:22:37 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:22:38 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:22:38 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:22:38 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:22:38 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:22:38 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:22:38 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:22:38 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:22:38 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:22:42 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:22:42 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:22:42 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:23:00 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:23:00 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:23:00 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:23:00 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:23:00 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:23:00 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:23:00 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:23:00 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 18:25:02 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:25:02 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:25:02 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:25:02 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:25:02 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:25:02 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:25:02 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:25:02 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:25:02 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:25:02 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:25:06 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:25:06 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:25:06 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:25:19 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:25:19 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:25:19 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:25:19 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:25:19 - <Notice> - Signal Received.  Stopping engine.
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:25:19 - <Info> - time elapsed 0.102s
-16/5/2020 -- 18:25:19 - <Info> - Alerts: 0
-16/5/2020 -- 18:25:19 - <Info> - cleaning up signature grouping structure... complete
-16/5/2020 -- 18:25:19 - <Notice> - Stats for 'br-9f57429ba6d7':  pkts: 0, drop: 0 (-nan%), invalid chksum: 0
-16/5/2020 -- 18:26:00 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:26:00 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:26:01 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:26:01 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:26:01 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:26:01 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:26:01 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:26:01 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:26:01 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:26:01 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:26:05 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:26:05 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:26:05 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:26:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:26:22 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:26:22 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:26:22 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:26:22 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:26:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:26:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:26:22 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 18:26:29 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:26:29 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:26:29 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:26:29 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:26:29 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:26:29 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:26:29 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:26:29 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:26:29 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:26:29 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:26:34 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:26:34 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:26:34 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:26:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:26:48 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:26:48 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:26:48 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:26:48 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:26:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:26:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:26:48 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 18:27:48 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:27:48 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:27:48 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:27:48 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:27:48 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:27:48 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:27:48 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:27:48 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:27:48 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:27:48 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:27:52 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:27:52 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:27:52 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:28:07 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:28:07 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:28:07 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:28:07 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:28:07 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:28:07 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:28:07 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:28:07 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 18:41:57 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 18:41:57 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 18:41:57 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:41:57 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 18:41:57 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 18:41:57 - <Info> - dropped the caps for main thread
-16/5/2020 -- 18:41:57 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 18:41:57 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 18:41:57 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 18:41:57 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:42:01 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 18:42:01 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 18:42:01 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 18:42:18 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 18:42:18 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 18:42:18 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 18:42:18 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 18:42:18 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 18:42:18 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 18:42:18 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 18:42:18 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 19:02:07 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 19:02:07 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 19:02:07 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 19:02:07 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 19:02:07 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 19:02:07 - <Info> - dropped the caps for main thread
-16/5/2020 -- 19:02:07 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 19:02:07 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 19:02:07 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 19:02:07 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:02:12 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 19:02:12 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 19:02:12 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 19:02:30 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 19:02:30 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 19:02:30 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:02:30 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 19:02:30 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 19:02:30 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 19:02:30 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 19:02:30 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 19:05:31 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 19:05:31 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 19:05:31 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 19:05:31 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-9f57429ba6d7': No such device (19)
-16/5/2020 -- 19:05:31 - <Info> - Shortening device name to: br-9..a6d7
-16/5/2020 -- 19:05:31 - <Info> - dropped the caps for main thread
-16/5/2020 -- 19:05:31 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 19:05:31 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 19:05:31 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 19:05:31 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:05:35 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 19:05:35 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 19:05:35 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 19:05:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-9f57429ba6d7": No such device
-16/5/2020 -- 19:05:48 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 19:05:48 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:05:48 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 19:05:48 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 19:05:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-9f57429ba6d7: No such device
-16/5/2020 -- 19:05:48 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
-16/5/2020 -- 19:05:48 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-9..a6d7 failed
-16/5/2020 -- 19:06:46 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 19:06:46 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 19:06:47 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
-16/5/2020 -- 19:06:47 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
-16/5/2020 -- 19:06:47 - <Info> - Shortening device name to: br-5..f30d
-16/5/2020 -- 19:06:47 - <Info> - dropped the caps for main thread
-16/5/2020 -- 19:06:47 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 19:06:47 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 19:06:47 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 19:06:47 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:06:51 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 19:06:51 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 19:06:51 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 19:07:05 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 19:07:05 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:07:05 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 19:07:05 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 19:07:06 - <Info> - All AFP capture threads are running.
-16/5/2020 -- 19:08:07 - <Notice> - Signal Received.  Stopping engine.
-16/5/2020 -- 19:08:07 - <Info> - time elapsed 62.044s
-16/5/2020 -- 19:08:08 - <Info> - Alerts: 265
-16/5/2020 -- 19:08:08 - <Info> - cleaning up signature grouping structure... complete
-16/5/2020 -- 19:08:08 - <Notice> - Stats for 'br-56052cd8f30d':  pkts: 10491, drop: 0 (0.00%), invalid chksum: 0
-16/5/2020 -- 19:08:08 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
-16/5/2020 -- 19:08:08 - <Info> - CPUs/cores online: 8
-16/5/2020 -- 19:08:08 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
-16/5/2020 -- 19:08:08 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
-16/5/2020 -- 19:08:09 - <Info> - Shortening device name to: br-5..f30d
-16/5/2020 -- 19:08:09 - <Info> - dropped the caps for main thread
-16/5/2020 -- 19:08:09 - <Info> - fast output device (regular) initialized: fast.log
-16/5/2020 -- 19:08:09 - <Info> - eve-log output device (regular) initialized: eve.json
-16/5/2020 -- 19:08:09 - <Info> - stats output device (regular) initialized: stats.log
-16/5/2020 -- 19:08:09 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:08:13 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
-16/5/2020 -- 19:08:13 - <Info> - Threshold config parsed: 0 rule(s) found
-16/5/2020 -- 19:08:13 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
-16/5/2020 -- 19:08:26 - <Info> - Going to use 8 thread(s)
-16/5/2020 -- 19:08:26 - <Info> - Running in live mode, activating unix socket
-16/5/2020 -- 19:08:26 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
-16/5/2020 -- 19:08:26 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
-16/5/2020 -- 19:08:27 - <Info> - All AFP capture threads are running.
+17/5/2020 -- 12:43:37 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 12:43:37 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 12:43:37 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
+17/5/2020 -- 12:43:37 - <Info> - Found an MTU of 1500 for 'br-56052cd8f30d'
+17/5/2020 -- 12:43:37 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 12:43:37 - <Info> - dropped the caps for main thread
+17/5/2020 -- 12:43:37 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 12:43:37 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 12:43:37 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 12:43:37 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 12:43:41 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 12:43:41 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 12:43:41 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 12:43:59 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 12:43:59 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 12:43:59 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 12:43:59 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 12:43:59 - <Info> - All AFP capture threads are running.
+17/5/2020 -- 13:02:20 - <Notice> - Signal Received.  Stopping engine.
+17/5/2020 -- 13:02:21 - <Info> - time elapsed 1101.922s
+17/5/2020 -- 13:02:21 - <Info> - Alerts: 805
+17/5/2020 -- 13:02:21 - <Info> - cleaning up signature grouping structure... complete
+17/5/2020 -- 13:02:21 - <Notice> - Stats for 'br-56052cd8f30d':  pkts: 15064, drop: 0 (0.00%), invalid chksum: 0
+17/5/2020 -- 13:02:32 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:02:32 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:02:32 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:02:32 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:02:33 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:02:33 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:02:33 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:02:33 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:02:33 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:02:33 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:02:37 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:02:37 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:02:37 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:02:54 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:02:54 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:02:54 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:02:54 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:02:54 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:02:54 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:02:54 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:02:54 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:03:14 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:03:14 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:03:14 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:03:14 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:03:14 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:03:14 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:03:14 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:03:14 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:03:14 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:03:14 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:03:18 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:03:18 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:03:18 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:03:37 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:03:37 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:03:37 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:03:37 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:03:37 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:03:37 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:03:37 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:03:37 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:03:37 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:03:37 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:03:41 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:03:42 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:03:42 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:03:59 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:03:59 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:03:59 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:03:59 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:03:59 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:03:59 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:03:59 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:03:59 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:04:34 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:04:34 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:04:34 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:04:34 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:04:34 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:04:34 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:04:34 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:04:34 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:04:34 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:04:34 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:04:38 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:04:38 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:04:38 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:04:53 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:04:53 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:04:53 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:04:53 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:04:53 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:04:53 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:04:53 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:04:53 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:04:53 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:04:53 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:04:57 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:04:57 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:04:57 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:05:14 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:05:14 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:05:14 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:05:14 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:05:14 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:05:14 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:05:14 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:05:14 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:05:31 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:05:31 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:05:31 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:05:31 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:05:31 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:05:31 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:05:31 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:05:31 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:05:31 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:05:31 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:05:35 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:05:35 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:05:35 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:05:49 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:05:49 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:05:49 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:05:49 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:05:49 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:05:49 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:05:49 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:05:49 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:05:57 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:05:57 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:05:57 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:05:57 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:05:57 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:05:57 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:05:57 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:05:57 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:05:57 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:05:57 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:06:02 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:06:02 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:06:02 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:06:20 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:06:20 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:06:20 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:06:20 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:06:20 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:06:20 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:06:20 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:06:20 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:07:21 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:07:21 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:07:21 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:07:21 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:07:21 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:07:21 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:07:21 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:07:21 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:07:21 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:07:21 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:07:25 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:07:25 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:07:25 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:07:39 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:07:39 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:07:39 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:07:39 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:07:39 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:07:39 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:07:39 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:07:39 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:08:59 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:08:59 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:08:59 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:08:59 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:08:59 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:08:59 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:08:59 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:08:59 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:08:59 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:08:59 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:09:03 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:09:03 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:09:04 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
+17/5/2020 -- 13:09:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find type for iface "br-56052cd8f30d": No such device
+17/5/2020 -- 13:09:22 - <Info> - Going to use 8 thread(s)
+17/5/2020 -- 13:09:22 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:09:22 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+17/5/2020 -- 13:09:22 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+17/5/2020 -- 13:09:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Unable to find iface br-56052cd8f30d: No such device
+17/5/2020 -- 13:09:22 - <Error> - [ERRCODE: SC_ERR_AFP_CREATE(190)] - Couldn't init AF_PACKET socket, fatal error
+17/5/2020 -- 13:09:22 - <Error> - [ERRCODE: SC_ERR_FATAL(171)] - thread W#01-br-5..f30d failed
+17/5/2020 -- 13:10:49 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+17/5/2020 -- 13:10:49 - <Info> - CPUs/cores online: 8
+17/5/2020 -- 13:10:50 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:10:50 - <Warning> - [ERRCODE: SC_ERR_SYSCALL(50)] - Failure when trying to get MTU via ioctl for 'br-56052cd8f30d': No such device (19)
+17/5/2020 -- 13:10:50 - <Info> - Shortening device name to: br-5..f30d
+17/5/2020 -- 13:10:50 - <Info> - dropped the caps for main thread
+17/5/2020 -- 13:10:50 - <Info> - fast output device (regular) initialized: fast.log
+17/5/2020 -- 13:10:50 - <Info> - eve-log output device (regular) initialized: eve.json
+17/5/2020 -- 13:10:50 - <Info> - stats output device (regular) initialized: stats.log
+17/5/2020 -- 13:10:50 - <Info> - Running in live mode, activating unix socket
+17/5/2020 -- 13:10:54 - <Info> - 1 rule files processed. 20321 rules successfully loaded, 0 rules failed
+17/5/2020 -- 13:10:54 - <Info> - Threshold config parsed: 0 rule(s) found
+17/5/2020 -- 13:10:54 - <Info> - 20324 signatures processed. 1127 are IP-only rules, 3951 are inspecting packet payload, 15016 inspect application layer, 103 are decoder event only
