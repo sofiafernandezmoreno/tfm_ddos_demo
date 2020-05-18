@@ -1,5 +1,5 @@
 **/.DS_Store
 .vscode/
 db_data/
-logs/
-var/
+!logs/
+!var/

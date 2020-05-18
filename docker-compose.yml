@@ -71,7 +71,7 @@ services:
     image: jasonish/suricata:latest
     container_name: suricata
     command:
-      - '-i br-56052cd8f30d'
+      - '-i br-e2df4ba0d19b'
     cap_add:
       - NET_ADMIN
       - SYS_NICE
@@ -102,6 +102,7 @@ services:
     volumes:
       - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
       - ./nginx/modsecurity.conf:/usr/local/openresty/nginx/modsec/modsecurity.conf
+      - ./nginx/initialization.conf:/usr/local/openresty/nginx/modsec/initialization.conf
       - ./nginx/modsecurity_rules.conf:/usr/local/openresty/nginx/modsec/modsecurity_rules.conf
       - ./nginx/unicode.mapping:/usr/local/nginx/conf/unicode.mapping
       - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
