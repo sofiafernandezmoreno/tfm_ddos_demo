@@ -9498,3 +9498,739 @@ flow_mgr.rows_maxlen                          | Total                     | 1
 tcp.memuse                                    | Total                     | 4587520
 tcp.reassembly_memuse                         | Total                     | 2934916
 flow.memuse                                   | Total                     | 7551056
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:28:38 (uptime: 0d, 00h 26m 10s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242261
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242087
+decoder.bytes                                 | Total                     | 4918014373
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238393
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242087
+decoder.tcp                                   | Total                     | 73505
+decoder.udp                                   | Total                     | 2311
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 362
+flow.udp                                      | Total                     | 543
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 153
+tcp.sessions                                  | Total                     | 343
+tcp.syn                                       | Total                     | 413
+tcp.synack                                    | Total                     | 333
+tcp.rst                                       | Total                     | 155
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 321
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 336
+app_layer.tx.dns_udp                          | Total                     | 750
+app_layer.flow.failed_udp                     | Total                     | 206
+flow_mgr.closed_pruned                        | Total                     | 246
+flow_mgr.new_pruned                           | Total                     | 221
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10000
+flow_mgr.flows_checked                        | Total                     | 2
+flow_mgr.flows_notimeout                      | Total                     | 2
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65534
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2922628
+flow.memuse                                   | Total                     | 7554336
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:28:46 (uptime: 0d, 00h 26m 18s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242337
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242158
+decoder.bytes                                 | Total                     | 4918028047
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238443
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242158
+decoder.tcp                                   | Total                     | 73550
+decoder.udp                                   | Total                     | 2316
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 363
+flow.udp                                      | Total                     | 544
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 153
+tcp.sessions                                  | Total                     | 344
+tcp.syn                                       | Total                     | 414
+tcp.synack                                    | Total                     | 334
+tcp.rst                                       | Total                     | 157
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 322
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 337
+app_layer.tx.dns_udp                          | Total                     | 754
+app_layer.flow.failed_udp                     | Total                     | 206
+flow_mgr.closed_pruned                        | Total                     | 246
+flow_mgr.new_pruned                           | Total                     | 221
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10000
+flow_mgr.flows_checked                        | Total                     | 1
+flow_mgr.flows_notimeout                      | Total                     | 1
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65535
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2930820
+flow.memuse                                   | Total                     | 7554992
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:28:54 (uptime: 0d, 00h 26m 26s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242481
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242302
+decoder.bytes                                 | Total                     | 4918067988
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238554
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242302
+decoder.tcp                                   | Total                     | 73641
+decoder.udp                                   | Total                     | 2334
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 363
+flow.udp                                      | Total                     | 544
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 155
+tcp.sessions                                  | Total                     | 344
+tcp.syn                                       | Total                     | 414
+tcp.synack                                    | Total                     | 334
+tcp.rst                                       | Total                     | 157
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 322
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 337
+app_layer.tx.dns_udp                          | Total                     | 754
+app_layer.flow.failed_udp                     | Total                     | 206
+flow_mgr.closed_pruned                        | Total                     | 246
+flow_mgr.new_pruned                           | Total                     | 221
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2930820
+flow.memuse                                   | Total                     | 7554992
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:02 (uptime: 0d, 00h 26m 34s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242545
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242366
+decoder.bytes                                 | Total                     | 4918074327
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238599
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242366
+decoder.tcp                                   | Total                     | 73684
+decoder.udp                                   | Total                     | 2334
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 363
+flow.udp                                      | Total                     | 544
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 157
+tcp.sessions                                  | Total                     | 344
+tcp.syn                                       | Total                     | 414
+tcp.synack                                    | Total                     | 334
+tcp.rst                                       | Total                     | 157
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 322
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 337
+app_layer.tx.dns_udp                          | Total                     | 754
+app_layer.flow.failed_udp                     | Total                     | 206
+flow_mgr.closed_pruned                        | Total                     | 246
+flow_mgr.new_pruned                           | Total                     | 222
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2930820
+flow.memuse                                   | Total                     | 7554664
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:10 (uptime: 0d, 00h 26m 42s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242563
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242387
+decoder.bytes                                 | Total                     | 4918076907
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238610
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242387
+decoder.tcp                                   | Total                     | 73695
+decoder.udp                                   | Total                     | 2334
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 363
+flow.udp                                      | Total                     | 544
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 157
+tcp.sessions                                  | Total                     | 344
+tcp.syn                                       | Total                     | 414
+tcp.synack                                    | Total                     | 334
+tcp.rst                                       | Total                     | 157
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 322
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 337
+app_layer.tx.dns_udp                          | Total                     | 754
+app_layer.flow.failed_udp                     | Total                     | 206
+flow_mgr.closed_pruned                        | Total                     | 246
+flow_mgr.new_pruned                           | Total                     | 233
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10001
+flow_mgr.flows_checked                        | Total                     | 3
+flow_mgr.flows_notimeout                      | Total                     | 1
+flow_mgr.flows_timeout                        | Total                     | 2
+flow_mgr.flows_removed                        | Total                     | 2
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65530
+flow_mgr.rows_empty                           | Total                     | 3
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2920580
+flow.memuse                                   | Total                     | 7550728
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:18 (uptime: 0d, 00h 26m 50s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242717
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242542
+decoder.bytes                                 | Total                     | 4918092129
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238749
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242542
+decoder.tcp                                   | Total                     | 73819
+decoder.udp                                   | Total                     | 2349
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 363
+flow.udp                                      | Total                     | 547
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 157
+tcp.sessions                                  | Total                     | 344
+tcp.syn                                       | Total                     | 414
+tcp.synack                                    | Total                     | 334
+tcp.rst                                       | Total                     | 160
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 322
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 337
+app_layer.tx.dns_udp                          | Total                     | 754
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 248
+flow_mgr.new_pruned                           | Total                     | 234
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10001
+flow_mgr.flows_checked                        | Total                     | 2
+flow_mgr.flows_notimeout                      | Total                     | 1
+flow_mgr.flows_timeout                        | Total                     | 1
+flow_mgr.flows_removed                        | Total                     | 1
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65534
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2916484
+flow.memuse                                   | Total                     | 7551056
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:26 (uptime: 0d, 00h 26m 58s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242825
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242646
+decoder.bytes                                 | Total                     | 4918111695
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238838
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242646
+decoder.tcp                                   | Total                     | 73886
+decoder.udp                                   | Total                     | 2369
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 159
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 160
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 248
+flow_mgr.new_pruned                           | Total                     | 234
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2922628
+flow.memuse                                   | Total                     | 7551712
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:34 (uptime: 0d, 00h 27m 06s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242852
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242673
+decoder.bytes                                 | Total                     | 4918114815
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238855
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242673
+decoder.tcp                                   | Total                     | 73900
+decoder.udp                                   | Total                     | 2371
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 160
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 160
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 256
+flow_mgr.new_pruned                           | Total                     | 234
+flow_mgr.est_pruned                           | Total                     | 195
+flow.spare                                    | Total                     | 10006
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65528
+flow_mgr.rows_empty                           | Total                     | 8
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2789420
+flow.memuse                                   | Total                     | 7549088
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:42 (uptime: 0d, 00h 27m 14s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3242939
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242760
+decoder.bytes                                 | Total                     | 4918138052
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238922
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242760
+decoder.tcp                                   | Total                     | 73966
+decoder.udp                                   | Total                     | 2371
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 161
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 160
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 257
+flow_mgr.new_pruned                           | Total                     | 234
+flow_mgr.est_pruned                           | Total                     | 196
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2795564
+flow.memuse                                   | Total                     | 7548432
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:50 (uptime: 0d, 00h 27m 22s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243028
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242849
+decoder.bytes                                 | Total                     | 4918158337
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3238988
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242849
+decoder.tcp                                   | Total                     | 74014
+decoder.udp                                   | Total                     | 2389
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 161
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 161
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 258
+flow_mgr.new_pruned                           | Total                     | 236
+flow_mgr.est_pruned                           | Total                     | 196
+flow.spare                                    | Total                     | 10000
+flow_mgr.flows_checked                        | Total                     | 2
+flow_mgr.flows_notimeout                      | Total                     | 2
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65534
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2789420
+flow.memuse                                   | Total                     | 7547448
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:29:58 (uptime: 0d, 00h 27m 30s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243072
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3242897
+decoder.bytes                                 | Total                     | 4918174578
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3239008
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3242897
+decoder.tcp                                   | Total                     | 74034
+decoder.udp                                   | Total                     | 2389
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 161
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 161
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 258
+flow_mgr.new_pruned                           | Total                     | 236
+flow_mgr.est_pruned                           | Total                     | 196
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2789420
+flow.memuse                                   | Total                     | 7547448
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:30:06 (uptime: 0d, 00h 27m 38s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243186
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3243008
+decoder.bytes                                 | Total                     | 4918184422
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3239107
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3243008
+decoder.tcp                                   | Total                     | 74133
+decoder.udp                                   | Total                     | 2389
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 161
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 161
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 258
+flow_mgr.new_pruned                           | Total                     | 237
+flow_mgr.est_pruned                           | Total                     | 196
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2789420
+flow.memuse                                   | Total                     | 7547120
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:30:14 (uptime: 0d, 00h 27m 46s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243291
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3243112
+decoder.bytes                                 | Total                     | 4918195030
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3239194
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3243112
+decoder.tcp                                   | Total                     | 74217
+decoder.udp                                   | Total                     | 2389
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 548
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 164
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 162
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 209
+flow_mgr.closed_pruned                        | Total                     | 262
+flow_mgr.new_pruned                           | Total                     | 237
+flow_mgr.est_pruned                           | Total                     | 196
+flow.spare                                    | Total                     | 10001
+flow_mgr.flows_checked                        | Total                     | 4
+flow_mgr.flows_notimeout                      | Total                     | 3
+flow_mgr.flows_timeout                        | Total                     | 1
+flow_mgr.flows_removed                        | Total                     | 1
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65532
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2738220
+flow.memuse                                   | Total                     | 7545808
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:30:22 (uptime: 0d, 00h 27m 54s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243359
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3243182
+decoder.bytes                                 | Total                     | 4918208863
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3239253
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3243182
+decoder.tcp                                   | Total                     | 74255
+decoder.udp                                   | Total                     | 2409
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 364
+flow.udp                                      | Total                     | 549
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 165
+tcp.sessions                                  | Total                     | 345
+tcp.syn                                       | Total                     | 415
+tcp.synack                                    | Total                     | 335
+tcp.rst                                       | Total                     | 162
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 323
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 338
+app_layer.tx.dns_udp                          | Total                     | 756
+app_layer.flow.failed_udp                     | Total                     | 210
+flow_mgr.closed_pruned                        | Total                     | 265
+flow_mgr.new_pruned                           | Total                     | 237
+flow_mgr.est_pruned                           | Total                     | 198
+flow.spare                                    | Total                     | 10000
+flow_mgr.flows_checked                        | Total                     | 2
+flow_mgr.flows_notimeout                      | Total                     | 1
+flow_mgr.flows_timeout                        | Total                     | 1
+flow_mgr.flows_timeout_inuse                  | Total                     | 1
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65534
+flow_mgr.rows_maxlen                          | Total                     | 1
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2686976
+flow.memuse                                   | Total                     | 7544168
+------------------------------------------------------------------------------------
+Date: 5/27/2020 -- 18:30:30 (uptime: 0d, 00h 28m 02s)
+------------------------------------------------------------------------------------
+Counter                                       | TM Name                   | Value
+------------------------------------------------------------------------------------
+capture.kernel_packets                        | Total                     | 3243430
+capture.kernel_drops                          | Total                     | 179
+decoder.pkts                                  | Total                     | 3243251
+decoder.bytes                                 | Total                     | 4918220092
+decoder.invalid                               | Total                     | 3162169
+decoder.ipv4                                  | Total                     | 3239307
+decoder.ipv6                                  | Total                     | 6
+decoder.ethernet                              | Total                     | 3243251
+decoder.tcp                                   | Total                     | 74305
+decoder.udp                                   | Total                     | 2413
+decoder.icmpv4                                | Total                     | 260
+decoder.icmpv6                                | Total                     | 1
+decoder.avg_pkt_size                          | Total                     | 1516
+decoder.max_pkt_size                          | Total                     | 1534
+flow.tcp                                      | Total                     | 365
+flow.udp                                      | Total                     | 550
+flow.icmpv6                                   | Total                     | 1
+decoder.event.ipv4.trunc_pkt                  | Total                     | 3162169
+decoder.event.ipv4.opt_pad_required           | Total                     | 165
+tcp.sessions                                  | Total                     | 346
+tcp.syn                                       | Total                     | 416
+tcp.synack                                    | Total                     | 336
+tcp.rst                                       | Total                     | 164
+tcp.stream_depth_reached                      | Total                     | 3
+tcp.overlap                                   | Total                     | 10
+app_layer.flow.http                           | Total                     | 5
+app_layer.tx.http                             | Total                     | 9
+app_layer.flow.tls                            | Total                     | 324
+app_layer.flow.dhcp                           | Total                     | 1
+app_layer.tx.dhcp                             | Total                     | 1
+app_layer.flow.dns_udp                        | Total                     | 339
+app_layer.tx.dns_udp                          | Total                     | 760
+app_layer.flow.failed_udp                     | Total                     | 210
+flow_mgr.closed_pruned                        | Total                     | 266
+flow_mgr.new_pruned                           | Total                     | 237
+flow_mgr.est_pruned                           | Total                     | 198
+flow.spare                                    | Total                     | 10000
+flow_mgr.rows_checked                         | Total                     | 65536
+flow_mgr.rows_skipped                         | Total                     | 65536
+tcp.memuse                                    | Total                     | 4587520
+tcp.reassembly_memuse                         | Total                     | 2693120
+flow.memuse                                   | Total                     | 7544824
