@@ -22,56 +22,56 @@ services:
         ipv4_address: 192.168.56.104
     ports:
       - "5601:5601"
-  wordpress:
-    image: wordpress:5.4.1-fpm
-    container_name: wordpress
-    restart: always
-    env_file: .env
-    networks:
-      wordpress:
-        ipv4_address: 192.168.56.103
-    volumes:
-      - wordpress-data:/var/www/html
-    environment:
-      WORDPRESS_DB_HOST: database:3306
-      WORDPRESS_DB_USER: $MYSQL_USER
-      WORDPRESS_DB_PASSWORD: $MYSQL_PASSWORD
-      WORDPRESS_DB_NAME: wordpress
-    depends_on:
-      - database
-  database:
-    image: mysql:5.7
-    container_name: database
-    restart: always
-    env_file: .env
-    networks:
-      wordpress:
-        ipv4_address: 192.168.56.109
-    volumes:
-      - database-data:/var/lib/mysql
-    environment:
-      MYSQL_DATABASE: wordpress
-  haproxy:
-    container_name: haproxy
-    build: ./haproxy
-    networks:
-        wordpress:
-            ipv4_address: ${HAPROXY_IP}
-    ports:
-        - 80:80
-    expose:
-        - ${HAPROXY_PUBLIC_PORT}
-    environment:
-        - NGINX_IP=192.168.56.106
-        - NGINX_PORT=80
-        - HAPROXY_IP=${HAPROXY_IP}
-        - HAPROXY_PUBLIC_PORT=${HAPROXY_PUBLIC_PORT}
-        - HAPROXY_PRIVATE_PORT=${HAPROXY_PRIVATE_PORT}
+  # wordpress:
+  #   image: wordpress:5.4.1-fpm
+  #   container_name: wordpress
+  #   restart: always
+  #   env_file: .env
+  #   networks:
+  #     wordpress:
+  #       ipv4_address: 192.168.56.103
+  #   volumes:
+  #     - wordpress-data:/var/www/html
+  #   environment:
+  #     WORDPRESS_DB_HOST: database:3306
+  #     WORDPRESS_DB_USER: $MYSQL_USER
+  #     WORDPRESS_DB_PASSWORD: $MYSQL_PASSWORD
+  #     WORDPRESS_DB_NAME: wordpress
+  #   depends_on:
+  #     - database
+  # database:
+  #   image: mysql:5.7
+  #   container_name: database
+  #   restart: always
+  #   env_file: .env
+  #   networks:
+  #     wordpress:
+  #       ipv4_address: 192.168.56.109
+  #   volumes:
+  #     - database-data:/var/lib/mysql
+  #   environment:
+  #     MYSQL_DATABASE: wordpress
+  # haproxy:
+  #   container_name: haproxy
+  #   build: ./haproxy
+  #   networks:
+  #       wordpress:
+  #           ipv4_address: ${HAPROXY_IP}
+  #   ports:
+  #       - 80:80
+  #   expose:
+  #       - ${HAPROXY_PUBLIC_PORT}
+  #   environment:
+  #       - NGINX_IP=192.168.1.56
+  #       - NGINX_PORT=80
+  #       - HAPROXY_IP=${HAPROXY_IP}
+  #       - HAPROXY_PUBLIC_PORT=${HAPROXY_PUBLIC_PORT}
+  #       - HAPROXY_PRIVATE_PORT=${HAPROXY_PRIVATE_PORT}
   suricata:
     image: jasonish/suricata:latest
     container_name: suricata
     command:
-      - '-i br-e2df4ba0d19b'
+      - '-i eth0'
     cap_add:
       - NET_ADMIN
       - SYS_NICE
@@ -89,29 +89,29 @@ services:
       - ./suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
       - ./var/log/suricata:/var/log/suricata
       
-  nginx:
-    build: ./openresty
-    container_name: webserver
-    restart: always
-    networks:
-      wordpress:
-        ipv4_address: 192.168.56.106
-    ports:
-      - 80
-      - 443
-    volumes:
-      - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
-      - ./nginx/modsecurity.conf:/usr/local/openresty/nginx/modsec/modsecurity.conf
-      - ./nginx/initialization.conf:/usr/local/openresty/nginx/modsec/initialization.conf
-      - ./nginx/modsecurity_rules.conf:/usr/local/openresty/nginx/modsec/modsecurity_rules.conf
-      - ./nginx/unicode.mapping:/usr/local/nginx/conf/unicode.mapping
-      - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - wordpress-data:/var/www/html
-      - nginx-data:/usr/share/nginx/html
-      - ./logs/nginx:/var/log/nginx
-    depends_on:
-      - wordpress
+  # nginx:
+  #   build: ./openresty
+  #   container_name: webserver
+  #   restart: always
+  #   networks:
+  #     wordpress:
+  #       ipv4_address: 192.168.56.106
+  #   ports:
+  #     - 80
+  #     - 443
+  #   volumes:
+  #     - ./nginx/nginx_main.conf:/usr/local/openresty/nginx/conf/nginx.conf
+  #     - ./nginx/modsecurity.conf:/usr/local/openresty/nginx/modsec/modsecurity.conf
+  #     - ./nginx/initialization.conf:/usr/local/openresty/nginx/modsec/initialization.conf
+  #     - ./nginx/modsecurity_rules.conf:/usr/local/openresty/nginx/modsec/modsecurity_rules.conf
+  #     - ./nginx/unicode.mapping:/usr/local/nginx/conf/unicode.mapping
+  #     - ./nginx/anti_ddos_challenge.lua:/usr/local/openresty/nginx/anti_ddos_challenge.lua
+  #     - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+  #     - wordpress-data:/var/www/html
+  #     - nginx-data:/usr/share/nginx/html
+  #     - ./logs/nginx:/var/log/nginx
+  #   depends_on:
+  #     - wordpress
     
 volumes:
   wordpress-data:
