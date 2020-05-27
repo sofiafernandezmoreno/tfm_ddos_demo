@@ -75,3 +75,20 @@
 27/5/2020 -- 17:54:00 - <Info> - Alerts: 0
 27/5/2020 -- 17:54:00 - <Info> - cleaning up signature grouping structure... complete
 27/5/2020 -- 17:54:00 - <Notice> - Stats for 'eth0':  pkts: 5439, drop: 0 (0.00%), invalid chksum: 0
+27/5/2020 -- 18:02:28 - <Notice> - This is Suricata version 5.0.3 RELEASE running in SYSTEM mode
+27/5/2020 -- 18:02:28 - <Info> - CPUs/cores online: 8
+27/5/2020 -- 18:02:28 - <Info> - Found an MTU of 1500 for 'eth0'
+27/5/2020 -- 18:02:28 - <Info> - Found an MTU of 1500 for 'eth0'
+27/5/2020 -- 18:02:28 - <Info> - dropped the caps for main thread
+27/5/2020 -- 18:02:28 - <Info> - fast output device (regular) initialized: fast.log
+27/5/2020 -- 18:02:28 - <Info> - eve-log output device (regular) initialized: eve.json
+27/5/2020 -- 18:02:28 - <Info> - stats output device (regular) initialized: stats.log
+27/5/2020 -- 18:02:28 - <Info> - Running in live mode, activating unix socket
+27/5/2020 -- 18:02:33 - <Info> - 1 rule files processed. 20369 rules successfully loaded, 0 rules failed
+27/5/2020 -- 18:02:33 - <Info> - Threshold config parsed: 0 rule(s) found
+27/5/2020 -- 18:02:33 - <Info> - 20372 signatures processed. 1130 are IP-only rules, 3958 are inspecting packet payload, 15054 inspect application layer, 103 are decoder event only
+27/5/2020 -- 18:02:52 - <Info> - Going to use 8 thread(s)
+27/5/2020 -- 18:02:52 - <Info> - Running in live mode, activating unix socket
+27/5/2020 -- 18:02:52 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
+27/5/2020 -- 18:02:52 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
+27/5/2020 -- 18:02:53 - <Info> - All AFP capture threads are running.
