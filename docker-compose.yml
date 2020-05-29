@@ -22,51 +22,6 @@ services:
         ipv4_address: 192.168.56.104
     ports:
       - "5601:5601"
-  # wordpress:
-  #   image: wordpress:5.4.1-fpm
-  #   container_name: wordpress
-  #   restart: always
-  #   env_file: .env
-  #   networks:
-  #     wordpress:
-  #       ipv4_address: 192.168.56.103
-  #   volumes:
-  #     - wordpress-data:/var/www/html
-  #   environment:
-  #     WORDPRESS_DB_HOST: database:3306
-  #     WORDPRESS_DB_USER: $MYSQL_USER
-  #     WORDPRESS_DB_PASSWORD: $MYSQL_PASSWORD
-  #     WORDPRESS_DB_NAME: wordpress
-  #   depends_on:
-  #     - database
-  # database:
-  #   image: mysql:5.7
-  #   container_name: database
-  #   restart: always
-  #   env_file: .env
-  #   networks:
-  #     wordpress:
-  #       ipv4_address: 192.168.56.109
-  #   volumes:
-  #     - database-data:/var/lib/mysql
-  #   environment:
-  #     MYSQL_DATABASE: wordpress
-  # haproxy:
-  #   container_name: haproxy
-  #   build: ./haproxy
-  #   networks:
-  #       wordpress:
-  #           ipv4_address: ${HAPROXY_IP}
-  #   ports:
-  #       - 80:80
-  #   expose:
-  #       - ${HAPROXY_PUBLIC_PORT}
-  #   environment:
-  #       - NGINX_IP=192.168.1.56
-  #       - NGINX_PORT=80
-  #       - HAPROXY_IP=${HAPROXY_IP}
-  #       - HAPROXY_PUBLIC_PORT=${HAPROXY_PUBLIC_PORT}
-  #       - HAPROXY_PRIVATE_PORT=${HAPROXY_PRIVATE_PORT}
   suricata:
     image: jasonish/suricata:latest
     container_name: suricata

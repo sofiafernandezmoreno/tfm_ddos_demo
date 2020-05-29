@@ -92,3 +92,8 @@
 27/5/2020 -- 18:02:52 - <Info> - Using unix socket file '/var/run/suricata/suricata-command.socket'
 27/5/2020 -- 18:02:52 - <Notice> - all 8 packet processing threads, 4 management threads initialized, engine started.
 27/5/2020 -- 18:02:53 - <Info> - All AFP capture threads are running.
+27/5/2020 -- 18:38:38 - <Notice> - Signal Received.  Stopping engine.
+27/5/2020 -- 18:38:38 - <Info> - time elapsed 2145.594s
+27/5/2020 -- 18:38:39 - <Info> - Alerts: 0
+27/5/2020 -- 18:38:42 - <Info> - cleaning up signature grouping structure... complete
+27/5/2020 -- 18:38:42 - <Notice> - Stats for 'eth0':  pkts: 3291565, drop: 179 (0.01%), invalid chksum: 0
