@@ -33,16 +33,16 @@ services:
       - NET_RAW
     network_mode: "host"
     volumes:
-      - ./suricata/etc/suricata.yaml:/etc/suricata/suricata.yaml
-      - ./suricata/etc/classification.config:/etc/suricata/classification.config
-      - ./suricata/etc/reference.config:/etc/suricata/reference.config
-      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
-      - ./suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
-      - ./suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
-      - ./suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
-      - ./suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
-      - ./suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
-      - ./var/log/suricata:/var/log/suricata
+      - ./SIEM+IDS+IPS/suricata/etc/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./SIEM+IDS+IPS/suricata/etc/classification.config:/etc/suricata/classification.config
+      - ./SIEM+IDS+IPS/suricata/etc/reference.config:/etc/suricata/reference.config
+      - ./SIEM+IDS+IPS/suricata/rules/local.rules:/etc/suricata/rules/local.rules
+      - ./SIEM+IDS+IPS/suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
+      - ./SIEM+IDS+IPS/suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
+      - ./SIEM+IDS+IPS/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
+      - ./SIEM+IDS+IPS/suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
+      - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
+      - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata
       
   # nginx:
   #   build: ./openresty
