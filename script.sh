@@ -23,7 +23,11 @@ if [ "$task" == "build" ] ;then
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml build
 fi
 
-if [ "$task" == "logs" ] ;then
+if [ "$task" == "logsc" ] ;then
 readonly container=${2}
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml logs -f $container
+fi
+if [ "$task" == "logs" ] ;then
+
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml logs -f 
 fi
