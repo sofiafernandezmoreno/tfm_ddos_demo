@@ -17,3 +17,7 @@ fi
 if [ "$task" == "ps" ] ;then
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml ps
 fi
+
+if [ "$task" == "build" ] ;then
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml build
+fi
