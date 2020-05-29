@@ -1,0 +1,6 @@
+version: '2'
+services:
+    waf:
+        build: waf
+        ports:
+            - "80:80"

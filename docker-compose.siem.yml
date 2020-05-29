@@ -2,13 +2,13 @@ version: '3.7'
 services:
   elasticsearch:
     container_name: elastic
-    build: elastic
+    build: ./SIEM+IDS+IPS/elastic
     networks:
       wordpress:
         ipv4_address: 192.168.56.101
   logstash:
     container_name: logstash
-    build: logstash
+    build: ./SIEM+IDS+IPS/logstash
     networks:
       wordpress:
         ipv4_address: 192.168.56.102
