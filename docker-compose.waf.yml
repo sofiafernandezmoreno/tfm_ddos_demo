@@ -4,3 +4,6 @@ services:
         build: WAF
         ports:
             - "80:80"
+        networks:
+            elk:
+                ipv4_address: 192.168.2.66

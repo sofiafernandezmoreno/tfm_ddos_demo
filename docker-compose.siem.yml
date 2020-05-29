@@ -47,7 +47,7 @@ services:
       - 5601:5601
     networks:
         elk:
-            ipv4_address: 192.168.1.76
+            ipv4_address: 192.168.2.76
     volumes:
       - ./SIEM+IDS+IPS/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./SIEM+IDS+IPS/nginx/auth/basic.auth:/etc/nginx/basic.auth  
@@ -59,4 +59,4 @@ networks:
         ipam:
             driver: default
             config:
-                - subnet: 192.168.1.0/24
+                - subnet: 192.168.2.0/24
