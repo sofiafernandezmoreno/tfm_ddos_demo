@@ -4,6 +4,7 @@ set -eux -o pipefail -o errexit
 
 
 readonly task=${1}
+
 if [ "$task" == "up" ] ;then
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml up -d
 fi
@@ -20,4 +21,9 @@ fi
 
 if [ "$task" == "build" ] ;then
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml build
+fi
+
+if [ "$task" == "logs" ] ;then
+readonly container=${2}
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml logs -f $container
 fi
