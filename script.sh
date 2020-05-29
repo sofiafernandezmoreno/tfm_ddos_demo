@@ -13,3 +13,7 @@ fi
 if [ "$task" == "down" ] ;then
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml down -v
 fi
+
+if [ "$task" == "ps" ] ;then
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml ps
+fi
