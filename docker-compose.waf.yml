@@ -4,3 +4,13 @@ services:
         build: WAF
         ports:
             - "80:80"
+        networks:
+          waf:
+            ipv4_address: 192.168.1.57
+networks:
+  waf:
+    driver: bridge
+    ipam: 
+      driver: default
+      config:
+        - subnet: 192.168.1.0/24 
