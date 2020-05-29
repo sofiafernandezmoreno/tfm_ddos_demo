@@ -3,23 +3,14 @@ services:
   elasticsearch:
     container_name: elastic
     build: ./SIEM+IDS+IPS/elastic
-    networks:
-      siem_ids:
-        ipv4_address: 192.168.56.101
   logstash:
     container_name: logstash
     build: ./SIEM+IDS+IPS/logstash
-    networks:
-      siem_ids:
-        ipv4_address: 192.168.56.102
     volumes: 
-      - ./var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
   kibana:
     container_name: kibana
     image: docker.elastic.co/kibana/kibana:7.7.0
-    networks:
-      siem_ids:
-        ipv4_address: 192.168.56.104
     ports:
       - "5601:5601"
   suricata:
@@ -44,10 +35,11 @@ services:
       - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
       - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata
       
-networks:
-  siem_ids:
-    driver: bridge
-    ipam: 
-      driver: default
-      config:
-        - subnet: 192.168.56.0/24 
+  # balancer:
+  #   container_name: proxy
+  #   build: nginx
+  #   networks:
+  #     - site1
+  #     - site2
+  #   ports:
+  #     - 80:80
