@@ -1,6 +1,0 @@
-2020/05/27 17:44:33 [notice] 1#1: ModSecurity-nginx v1.0.0 (rules loaded inline/local/remote: 0/6/0)
-2020/05/27 17:44:33 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.56.33, server: 127.0.0.1, request: "HEAD / HTTP/1.0", upstream: "fastcgi://192.168.56.103:9000"
-2020/05/27 17:44:35 [error] 6#6: *3 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.56.33, server: 127.0.0.1, request: "HEAD / HTTP/1.0", upstream: "fastcgi://192.168.56.103:9000"
-2020/05/27 17:44:37 [error] 6#6: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.56.33, server: 127.0.0.1, request: "HEAD / HTTP/1.0", upstream: "fastcgi://192.168.56.103:9000"
-2020/05/27 17:44:39 [error] 6#6: *7 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.56.33, server: 127.0.0.1, request: "HEAD / HTTP/1.0", upstream: "fastcgi://192.168.56.103:9000"
-2020/05/27 17:44:41 [error] 6#6: *9 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.56.33, server: 127.0.0.1, request: "HEAD / HTTP/1.0", upstream: "fastcgi://192.168.56.103:9000"
