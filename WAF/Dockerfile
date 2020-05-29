@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 RUN apt-get update && \
 	apt-get install -y git wget build-essential libpcre3 libpcre3-dev libssl-dev libtool autoconf apache2-dev libxml2-dev libcurl4-openssl-dev automake pkgconf && \
 	cd /usr/src/ && \
@@ -16,7 +16,7 @@ RUN apt-get update && \
 	make install
 
 
-FROM ubuntu:18.04
+FROM ubuntu:latest
 COPY --from=0 /usr/src/modsecurity/ /usr/src/modsecurity/
 COPY --from=0 /usr/local/nginx/ /usr/local/nginx/
 RUN ln -s /usr/local/nginx/sbin/nginx /bin/nginx && \
