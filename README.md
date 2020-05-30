@@ -17,5 +17,4 @@ La ejecución del script tendrá la unificación de dos orquestaciones de conten
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml up -d
 ```
 
-## IPTABLES
 
