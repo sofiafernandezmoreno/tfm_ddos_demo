@@ -31,3 +31,12 @@ if [ "$task" == "logs" ] ;then
 
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml logs -f 
 fi
+
+if [ "$task" == "exec" ] ;then
+readonly container=${2}
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml exec $container /bin/bash
+fi
+
+
+
+
