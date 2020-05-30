@@ -9,9 +9,11 @@ services:
       - elk
   logstash:
     container_name: logstash
-    build: ./SIEM+IDS+IPS/logstash
+    image: docker.elastic.co/logstash/logstash:7.7.0
     volumes: 
       - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/logstash/pipeline/:/usr/share/logstash/pipeline/
+      - ./SIEM+IDS+IPS/logstash/patterns/:/usr/share/logstash/patterns/
     networks:
       - elk
   kibana:
