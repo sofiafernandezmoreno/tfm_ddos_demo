@@ -8,14 +8,14 @@ services:
      image: wordpress:latest
      volumes:
        - ./WORDPRESS/wp-content:/var/www/html/wp-content
-       - ./WORDPRESS/wp-config.php:/var/www/html/wp-config.php
+       - ./WORDPRESS/website/wp-config.php:/var/www/html/wp-config.php
      restart: always
      networks:
        - tfm
 
 
    reverse_proxy:
-    container_name: load_balancer_wordpress
+    container_name: proxy_wordpress
     image: nginx:alpine
     ports:
         - "443:443"

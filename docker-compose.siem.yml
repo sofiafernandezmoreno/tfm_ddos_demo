@@ -53,6 +53,9 @@ services:
     container_name: filebeat
     restart: always
     image: docker.elastic.co/beats/filebeat:7.7.0
+    environment:
+      - setup.kibana.host=kibana:5601
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
     volumes: 
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
@@ -98,7 +101,6 @@ services:
       - 5601:5601
       - 9600:9600
       - 5000:5000
-      - 9090:9090
     networks:
         tfm:
             ipv4_address: 192.168.2.76

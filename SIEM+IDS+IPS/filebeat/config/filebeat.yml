@@ -45,13 +45,13 @@ processors:
 setup.dashboards:
   enabled: true
 
-#============================== Kibana =========================================
-setup.kibana:
-  host: "kibana:5601"
+# #============================== Kibana =========================================
+# setup.kibana:
+#   host: "kibana:5601"
 
-#============================== elasticsearch ========================================= 
-output.elasticsearch:
-  hosts: ["elasticsearch:9200"]
+# #============================== elasticsearch ========================================= 
+# output.elasticsearch:
+#   hosts: ["192.168.2.76:9200"]
 
 #============================== logstash =========================================
 # output.logstash:
