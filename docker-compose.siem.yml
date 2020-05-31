@@ -90,9 +90,9 @@ services:
   prometheus:
     container_name: prometheus
     build:
-      context: ./monitoring
+      context: ./SIEM+IDS+IPS+Prometheus/prometheus
       dockerfile: Dockerfile-monitoring
-    image: monitoring
+    image: prometheus
     volumes:
     - /prometheus-data:/prometheus-data
     networks:
