@@ -85,7 +85,7 @@ services:
       - ./SIEM+IDS+IPS/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
       - ./SIEM+IDS+IPS/suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
       - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
-      - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata
+      - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata
   nginx:
     image: nginx:alpine
     ports:

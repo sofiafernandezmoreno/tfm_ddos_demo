@@ -5,9 +5,9 @@ filebeat.modules:
   auth:
     enabled: true
 - module: suricata
-  log:
-    # Does not look like Auditd is supported in Alpine linux: https://github.com/linuxkit/linuxkit/issues/52
+  eve:
     enabled: true
+    var.paths: ["/var/log/eve.json"]
 - module: nginx
   access:
     var.paths: ["/var/log/nginx/access.log*"]
