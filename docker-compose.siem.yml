@@ -31,6 +31,23 @@ services:
       - elk
     depends_on:
       - elasticsearch
+  metricbeat:
+    image: docker.elastic.co/beats/metricbeat:7.7.0
+    # command: --strict.perms=false
+    environment:
+      - setup.kibana.host=kibana:5601
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
+    cap_add:
+      - AUDIT_CONTROL
+      - AUDIT_READ
+    volumes:
+      # - ${PWD}/configs/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+      - /proc:/hostfs/proc:ro
+      - /:/hostfs:ro
+    networks:
+      - elk
   filebeat:
     container_name: filebeat
     restart: always
@@ -38,6 +55,8 @@ services:
     volumes: 
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - elk
     depends_on:
