@@ -1,0 +1,53 @@
+filebeat.modules:
+- module: system
+  syslog:
+    enabled: true
+  auth:
+    enabled: true
+- module: auditd
+  log:
+    # Does not look like Auditd is supported in Alpine linux: https://github.com/linuxkit/linuxkit/issues/52
+    enabled: false
+- module: nginx
+  access:
+    var.paths: ["/var/log/nginx/access.log*"]
+  error:
+    var.paths: ["/var/log/nginx/error.log*"]
+    
+filebeat.inputs:
+- type: docker
+  enabled: true
+  containers:
+    stream: all # can be all, stdout or stderr
+    ids:
+      - '*'
+#========================== Filebeat autodiscover ==============================
+# See this URL on how to run Apache2 Filebeat module: # https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
+filebeat.autodiscover:
+  providers:
+    - type: docker
+      # https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html
+      # This URL alos contains instructions on multi-line logs
+      hints.enabled: true
+
+processors:
+- add_docker_metadata: ~
+- add_locale:
+    format: offset
+- add_host_metadata:
+    netinfo.enabled: true
+#============================== Dashboards =====================================
+setup.dashboards:
+  enabled: true
+
+#============================== Kibana =========================================
+setup.kibana:
+  host: "kibana:5601"
+
+#============================== elasticsearch ========================================= 
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+
+#============================== logstash =========================================
+output.logstash:
+      hosts: ["logstash:9600"]

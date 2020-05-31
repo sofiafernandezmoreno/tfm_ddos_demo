@@ -8,13 +8,15 @@ services:
       - elasticsearch:/usr/share/elasticsearch/data 
     networks:
       - elk
+    healthcheck:
+      test: ["CMD", "curl","-s" , "http://localhost:9200/_cat/health"]
   logstash:
     container_name: logstash
     restart: always
     build: ./SIEM+IDS+IPS/logstash
     volumes: 
       - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
-      - ./SIEM+IDS+IPS/logstash/config/logstash.yaml:/usr/share/logstash/config/logstash.yaml
+      - ./SIEM+IDS+IPS/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
     networks:
       - elk
     depends_on:
@@ -24,11 +26,23 @@ services:
     restart: always
     image: docker.elastic.co/kibana/kibana:7.7.0
     volumes: 
-      - ./SIEM+IDS+IPS/kibana/kibana.yaml:/usr/share/kibana/config/kibana.yaml
+      - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     networks:
       - elk
     depends_on:
       - elasticsearch
+  filebeat:
+    container_name: filebeat
+    restart: always
+    image: docker.elastic.co/beats/filebeat:7.7.0
+    volumes: 
+      - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+      - nginx
   suricata:
     image: jasonish/suricata:latest
     container_name: suricata
