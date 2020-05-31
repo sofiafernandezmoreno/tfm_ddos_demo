@@ -17,4 +17,11 @@ La ejecución del script tendrá la unificación de dos orquestaciones de conten
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml up -d
 ```
 
-
+### Creación de un index pattern via Kibana API
+```console
+curl -XPOST -D- 'http://192.168.2.76:5601/api/saved_objects/index-pattern' \
+    -H 'Content-Type: application/json' \
+    -H 'kbn-version: 7.7.0' \
+    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}' \
+-u 'tfmddos:tfmdd0s2020'
+```

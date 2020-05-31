@@ -4,10 +4,10 @@ filebeat.modules:
     enabled: true
   auth:
     enabled: true
-- module: auditd
+- module: suricata
   log:
     # Does not look like Auditd is supported in Alpine linux: https://github.com/linuxkit/linuxkit/issues/52
-    enabled: false
+    enabled: true
 - module: nginx
   access:
     var.paths: ["/var/log/nginx/access.log*"]
@@ -23,12 +23,12 @@ filebeat.inputs:
       - '*'
 #========================== Filebeat autodiscover ==============================
 # See this URL on how to run Apache2 Filebeat module: # https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
-filebeat.autodiscover:
-  providers:
-    - type: docker
-      # https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html
-      # This URL alos contains instructions on multi-line logs
-      hints.enabled: true
+# filebeat.autodiscover:
+#   providers:
+#     - type: docker
+#       # https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html
+#       # This URL alos contains instructions on multi-line logs
+#       hints.enabled: true
 
 processors:
 - add_docker_metadata: ~
@@ -49,5 +49,5 @@ output.elasticsearch:
   hosts: ["elasticsearch:9200"]
 
 #============================== logstash =========================================
-output.logstash:
-      hosts: ["logstash:9600"]
+# output.logstash:
+#       hosts: ["logstash:9600"]
