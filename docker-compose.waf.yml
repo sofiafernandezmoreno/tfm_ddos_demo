@@ -1,6 +1,7 @@
 version: '3.7'
 services:
     waf:
+        container_name: waf
         build: WAF
         ports:
             - "80:80"

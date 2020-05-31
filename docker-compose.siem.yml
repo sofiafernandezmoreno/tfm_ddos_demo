@@ -32,6 +32,7 @@ services:
     depends_on:
       - elasticsearch
   metricbeat:
+    container_name: metricbeat
     image: docker.elastic.co/beats/metricbeat:7.7.0
     # command: --strict.perms=false
     environment:
