@@ -38,5 +38,8 @@ docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml exec $contai
 fi
 
 
-
+if [ "$task" == "restart" ] ;then
+readonly container=${2}
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml restart $container 
+fi
 
