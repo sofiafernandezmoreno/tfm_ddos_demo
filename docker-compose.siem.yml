@@ -38,6 +38,7 @@ services:
       - ./SIEM+IDS+IPS/suricata/etc/classification.config:/etc/suricata/classification.config
       - ./SIEM+IDS+IPS/suricata/etc/reference.config:/etc/suricata/reference.config
       - ./SIEM+IDS+IPS/suricata/rules/emerging-dos.rules:/var/lib/suricata/rules/emerging-dos.rules
+      - ./SIEM+IDS+IPS/suricata/rules/ddos.rules:/var/lib/suricata/rules/ddos.rules
       - ./SIEM+IDS+IPS/suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
       - ./SIEM+IDS+IPS/suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
       - ./SIEM+IDS+IPS/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
