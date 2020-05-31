@@ -6,40 +6,40 @@ set -eux -o pipefail -o errexit
 readonly task=${1}
 
 if [ "$task" == "up" ] ;then
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml up -d
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
 fi
 if [ "$task" == "stop" ];then
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml stop
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml stop
 fi
 if [ "$task" == "down" ] ;then
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml down -v
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml down -v
 fi
 
 if [ "$task" == "ps" ] ;then
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml ps
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml ps
 fi
 
 if [ "$task" == "build" ] ;then
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml build
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml build
 fi
 
 if [ "$task" == "logsc" ] ;then
 readonly container=${2}
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml logs -f $container
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml logs -f $container
 fi
 if [ "$task" == "logs" ] ;then
 
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml logs -f 
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml logs -f 
 fi
 
 if [ "$task" == "exec" ] ;then
 readonly container=${2}
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml exec $container /bin/bash
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml exec $container /bin/bash
 fi
 
 
 if [ "$task" == "restart" ] ;then
 readonly container=${2}
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml restart $container 
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml restart $container 
 fi
 
