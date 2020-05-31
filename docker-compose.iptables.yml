@@ -6,5 +6,5 @@ services:
         cap_add:
         - NET_ADMIN
         networks:
-            elk:
+            tfm:
                 ipv4_address: 192.168.2.86

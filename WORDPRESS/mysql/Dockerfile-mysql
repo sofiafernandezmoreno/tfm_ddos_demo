@@ -1,0 +1,11 @@
+FROM mysql:latest
+
+ADD my.cnf /etc/mysql/my.cnf
+ADD ca-cert.pem /etc/mysql-ssl/ca-cert.pem
+ADD server-cert.pem /etc/mysql-ssl/server-cert.pem
+ADD server-key.pem /etc/mysql-ssl/server-key.pem
+
+RUN chown -R mysql:root /etc/mysql-ssl/*.pem
+
+RUN chmod 600 /etc/mysql-ssl/*.pem
+

@@ -1,0 +1,17 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get -y install cron mysql-client
+
+RUN touch /var/log/cron.log
+
+ARG USERNAME
+ARG PASSWORD
+ARG DBNAME
+
+RUN echo "* * * * * /usr/bin/mysqldump $DBNAME -P 3306 -h -u $USERNAME -p'$PASSWORD' > '/home/$(date -u +\%Y\%m\%dT\%H\%M\%S)Z-backup.log' 2>> /var/log/cron.log" > /etc/cron.d/mysql_backup
+
+RUN chmod 0644 /etc/cron.d/mysql_backup
+
+RUN crontab /etc/cron.d/mysql_backup
+
+CMD ["cron", "-f"]
