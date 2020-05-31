@@ -14,14 +14,21 @@ services:
     build: ./SIEM+IDS+IPS/logstash
     volumes: 
       - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/logstash/config/logstash.yaml:/usr/share/logstash/config/logstash.yaml
     networks:
       - elk
+    depends_on:
+      - elasticsearch
   kibana:
     container_name: kibana
     restart: always
     image: docker.elastic.co/kibana/kibana:7.7.0
+    volumes: 
+      - ./SIEM+IDS+IPS/kibana/kibana.yaml:/usr/share/kibana/config/kibana.yaml
     networks:
       - elk
+    depends_on:
+      - elasticsearch
   suricata:
     image: jasonish/suricata:latest
     container_name: suricata
@@ -39,6 +46,7 @@ services:
       - ./SIEM+IDS+IPS/suricata/etc/reference.config:/etc/suricata/reference.config
       - ./SIEM+IDS+IPS/suricata/rules/emerging-dos.rules:/var/lib/suricata/rules/emerging-dos.rules
       - ./SIEM+IDS+IPS/suricata/rules/ddos.rules:/var/lib/suricata/rules/ddos.rules
+      - ./SIEM+IDS+IPS/suricata/rules/test-ddos.rules:/var/lib/suricata/rules/test-ddos.rules
       - ./SIEM+IDS+IPS/suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
       - ./SIEM+IDS+IPS/suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
       - ./SIEM+IDS+IPS/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
@@ -49,7 +57,9 @@ services:
     image: nginx:alpine
     ports:
       - 9200:9200
+      - 9300:9300
       - 5601:5601
+      - 9600:9600
     networks:
         elk:
             ipv4_address: 192.168.2.76
