@@ -4,10 +4,15 @@ filebeat.modules:
     enabled: true
   auth:
     enabled: true
+- module: iptables
+  log:
+    enabled: true
+    var.paths: ["/var/log/iptables.log"]
+    var.input: "file"
 - module: suricata
   eve:
     enabled: true
-    var.paths: ["/var/log/eve.json"]
+    var.paths: ["/var/log/suricata/fast.log","/var/log/suricata/suricata.log"]
 - module: nginx
   access:
     var.paths: ["/var/log/nginx/access.log*"]

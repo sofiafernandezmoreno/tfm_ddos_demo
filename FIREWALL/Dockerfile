@@ -1,8 +1,8 @@
 FROM alpine
 
 RUN \
-  apk --update add iptables bash
+  apk --update add iptables bash sudo
 
-COPY iptables /iptables.sh
+COPY iptables.sh /iptables.sh
 
 CMD /iptables.sh

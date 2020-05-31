@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+    firewall:
+        container_name: iptables
+        build: FIREWALL
+        cap_add:
+        - NET_ADMIN
+        networks:
+            elk:
+                ipv4_address: 192.168.2.86
