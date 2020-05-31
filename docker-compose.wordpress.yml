@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
    wordpress:
+     container_name: wordpress
      depends_on:
        - wordpress_db
      image: wordpress:latest
@@ -12,20 +13,16 @@ services:
      networks:
        - tfm
 
-   wordpress_monitoring:
-     depends_on:
-       - wordpress
-     image: nginx/nginx-prometheus-exporter:0.4.0
-     command: -nginx.scrape-uri http://192.168.2.56/basic_status
-     networks:
-       - tfm
 
    reverse_proxy:
-    image: nginx
+    container_name: load_balancer_wordpress
+    image: nginx:alpine
     ports:
         - "443:443"
     volumes:
-        - ./WORDPRESS/website:/etc/nginx/conf.d
+        - ./WORDPRESS/website/proxy_ssl.conf:/etc/nginx/nginx.conf
+        - ./WORDPRESS/website/cert.pem:/etc/nginx/cert.pem
+        - ./WORDPRESS/website/key.pem:/etc/nginx/key.pem
     depends_on:
         - wordpress
     networks:
@@ -33,6 +30,7 @@ services:
             ipv4_address: 192.168.2.56
 
    wordpress_db:
+     container_name: db_wordpress
      build:
        context: ./WORDPRESS/mysql
        dockerfile: Dockerfile-mysql
@@ -49,6 +47,7 @@ services:
         - tfm
 
    db_backup:
+     container_name: db_backup
      depends_on:
        - wordpress_db
      build:

@@ -3,7 +3,7 @@ services:
   elasticsearch:
     container_name: elastic
     restart: always
-    build: ./SIEM+IDS+IPS+Prometheus/elastic
+    build: ./SIEM+IDS+IPS/elastic
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data 
     networks:
@@ -13,10 +13,10 @@ services:
   logstash:
     container_name: logstash
     restart: always
-    build: ./SIEM+IDS+IPS+Prometheus/logstash
+    build: ./SIEM+IDS+IPS/logstash
     volumes: 
-      - ./SIEM+IDS+IPS+Prometheus/var/log/suricata:/var/log/suricata:rw
-      - ./SIEM+IDS+IPS+Prometheus/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
     networks:
       - tfm
     depends_on:
@@ -26,7 +26,7 @@ services:
     restart: always
     image: docker.elastic.co/kibana/kibana:7.7.0
     volumes: 
-      - ./SIEM+IDS+IPS+Prometheus/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+      - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     networks:
       - tfm
     depends_on:
@@ -53,8 +53,8 @@ services:
     restart: always
     image: docker.elastic.co/beats/filebeat:7.7.0
     volumes: 
-      - ./SIEM+IDS+IPS+Prometheus/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./SIEM+IDS+IPS+Prometheus/filebeat/logs/nginx/:/var/log/nginx/
+      - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
@@ -75,30 +75,21 @@ services:
       - NET_RAW
     network_mode: "host"
     volumes:
-      - ./SIEM+IDS+IPS+Prometheus/suricata/etc/suricata.yaml:/etc/suricata/suricata.yaml
-      - ./SIEM+IDS+IPS+Prometheus/suricata/etc/classification.config:/etc/suricata/classification.config
-      - ./SIEM+IDS+IPS+Prometheus/suricata/etc/reference.config:/etc/suricata/reference.config
-      - ./SIEM+IDS+IPS+Prometheus/suricata/rules/emerging-dos.rules:/var/lib/suricata/rules/emerging-dos.rules
-      - ./SIEM+IDS+IPS+Prometheus/suricata/rules/ddos.rules:/var/lib/suricata/rules/ddos.rules
-      - ./SIEM+IDS+IPS+Prometheus/suricata/rules/test-ddos.rules:/var/lib/suricata/rules/test-ddos.rules
-      - ./SIEM+IDS+IPS+Prometheus/suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
-      - ./SIEM+IDS+IPS+Prometheus/suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
-      - ./SIEM+IDS+IPS+Prometheus/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
-      - ./SIEM+IDS+IPS+Prometheus/suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
-      - ./SIEM+IDS+IPS+Prometheus/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
-      - ./SIEM+IDS+IPS+Prometheus/suricata/var/log/suricata:/var/log/suricata
-  prometheus:
-    container_name: prometheus
-    build:
-      context: ./SIEM+IDS+IPS+Prometheus/prometheus
-      dockerfile: Dockerfile-monitoring
-    image: prometheus
-    volumes:
-    - /prometheus-data:/prometheus-data
-    networks:
-      - tfm
+      - ./SIEM+IDS+IPS/suricata/etc/suricata.yaml:/etc/suricata/suricata.yaml
+      - ./SIEM+IDS+IPS/suricata/etc/classification.config:/etc/suricata/classification.config
+      - ./SIEM+IDS+IPS/suricata/etc/reference.config:/etc/suricata/reference.config
+      - ./SIEM+IDS+IPS/suricata/rules/emerging-dos.rules:/var/lib/suricata/rules/emerging-dos.rules
+      - ./SIEM+IDS+IPS/suricata/rules/ddos.rules:/var/lib/suricata/rules/ddos.rules
+      - ./SIEM+IDS+IPS/suricata/rules/test-ddos.rules:/var/lib/suricata/rules/test-ddos.rules
+      - ./SIEM+IDS+IPS/suricata/configs/disable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/disable.conf
+      - ./SIEM+IDS+IPS/suricata/configs/drop.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/drop.conf
+      - ./SIEM+IDS+IPS/suricata/configs/enable.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/enable.conf
+      - ./SIEM+IDS+IPS/suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
+      - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
+      - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata
 
   nginx:
+    container_name: load_balancer_monitoring
     image: nginx:alpine
     ports:
       - 9200:9200
@@ -111,10 +102,8 @@ services:
         tfm:
             ipv4_address: 192.168.2.76
     volumes:
-      - ./SIEM+IDS+IPS+Prometheus/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./SIEM+IDS+IPS+Prometheus/nginx/auth/basic.auth:/etc/nginx/basic.auth
-      - ./SIEM+IDS+IPS+Prometheus/nginx/key.pem:/etc/nginx/conf.d/key.pem
-      - ./SIEM+IDS+IPS+Prometheus/nginx/cert.pem:/etc/nginx/conf.d/cert.pem
+      - ./SIEM+IDS+IPS/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./SIEM+IDS+IPS/nginx/auth/basic.auth:/etc/nginx/basic.auth
 
 volumes:
   elasticsearch:
