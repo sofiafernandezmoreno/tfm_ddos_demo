@@ -24,15 +24,43 @@ services:
     depends_on:
       - elasticsearch
   kibana:
-    container_name: kibana
-    restart: always
     image: docker.elastic.co/kibana/kibana:7.7.0
-    volumes: 
-      - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    container_name: kibana
+    environment:
+      SERVER_NAME: localhost
+      ELASTICSEARCH_URL: http://elasticsearch:9200/
+    ports:
+      - 5601:5601
+    volumes:
+      - type: volume
+        source: logs
+        target: /var/log
+    ulimits:
+      nproc: 262144
+      memlock:
+        soft: -1
+        hard: -1
+    cap_add:
+      - ALL
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 10s
+      resources:
+        limits:
+          cpus: '1'
+          memory: 256M
+        reservations:
+          cpus: '1'
+          memory: 256M
+      restart_policy:
+        condition: on-failure
+        delay: 30s
+        max_attempts: 3
+        window: 120s
     networks:
       - tfm
-    depends_on:
-      - elasticsearch
   metricbeat:
     image: docker.elastic.co/beats/metricbeat:7.7.0
     # command: --strict.perms=false
@@ -88,24 +116,44 @@ services:
       - ./SIEM+IDS+IPS/suricata/configs/modify.conf:/usr/lib/python3.7/site-packages/suricata/update/configs/modify.conf
       - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
       - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata
-
+  auditbeat:
+    image: docker.elastic.co/beats/auditbeat:7.7.0
+    command: auditbeat -e -strict.perms=false
+    user: root
+    environment:
+      - setup.kibana.host=kibana:5601
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
+    cap_add: ['AUDIT_CONTROL', 'AUDIT_READ']
+    pid: "host"
+    volumes:
+    #   - ${PWD}/configs/auditbeat.docker.yml:/usr/share/auditbeat/auditbeat.yml
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - tfm
+  heartbeat:
+    image: docker.elastic.co/beats/heartbeat:7.7.0
+    command: --strict.perms=false
+    environment:
+      - setup.kibana.host=kibana:5601
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
+    # volumes:
+    #   - ${PWD}/configs/heartbeat.docker.yml:/usr/share/heartbeat/heartbeat.yml
+    networks:
+      - tfm
   nginx:
     container_name: load_balancer_monitoring
     image: nginx:alpine
     ports:
-      - 9200:9200
-      - 5601:5601
-      - 9600:9600
-      - 5000:5000
+        - 8081:80
     networks:
         tfm:
             ipv4_address: 192.168.2.76
     volumes:
       - ./SIEM+IDS+IPS/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./SIEM+IDS+IPS/nginx/auth/basic.auth:/etc/nginx/basic.auth
-
 volumes:
   elasticsearch:
+  logs:
 
 networks:
     tfm:
