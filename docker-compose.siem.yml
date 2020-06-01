@@ -39,7 +39,7 @@ services:
     # command: --strict.perms=false
     environment:
       - setup.kibana.host=kibana:5601
-      - output.elasticsearch.hosts=["elasticsearch:9200",""elasticsearch:9300""]
+      - output.elasticsearch.hosts=["elasticsearch:9200","elasticsearch:9300"]
     cap_add:
       - AUDIT_CONTROL
       - AUDIT_READ
@@ -57,7 +57,7 @@ services:
     image: docker.elastic.co/beats/filebeat:7.7.0
     environment:
       - setup.kibana.host=kibana:5601
-      - output.elasticsearch.hosts=["elasticsearch:9200",""elasticsearch:9300""]
+      - output.elasticsearch.hosts=["elasticsearch:9200","elasticsearch:9300"]
     volumes: 
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
