@@ -2,7 +2,7 @@
 filebeat.config.modules:
 
   path: /usr/share/filebeat/modules.d/*.yml
-  reload.enabled: false
+  reload.enabled: true
   #reload.period: 10s
 
 filebeat.modules:
@@ -88,4 +88,4 @@ setup.kibana:
 
 #============================== logstash =========================================
 output.logstash:
-      hosts: ["logstash:9600"]
+      hosts: ["logstash:5044"]
