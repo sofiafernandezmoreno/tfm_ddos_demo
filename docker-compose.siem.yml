@@ -32,6 +32,7 @@ services:
     ports:
       - 5601:5601
     volumes:
+      - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/kibana.yml
       - type: volume
         source: logs
         target: /var/log
@@ -140,6 +141,11 @@ services:
   nginx:
     container_name: load_balancer_monitoring
     image: nginx:alpine
+    labels:
+      co.elastic.logs/disable: false
+      co.elastic.logs/module: nginx
+      co.elastic.logs/fileset.stdout: access
+      co.elastic.logs/fileset.stderr: error
     ports:
         - 8081:80
     networks:

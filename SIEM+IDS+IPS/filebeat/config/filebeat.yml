@@ -1,7 +1,7 @@
 
 filebeat.config.modules:
 
-  path: /etc/filebeat/modules.d/*.yml
+  path: /usr/share/filebeat/modules.d/*.yml
   reload.enabled: false
   #reload.period: 10s
 
@@ -25,8 +25,10 @@ filebeat.modules:
     var.paths: ["/var/log/suricata/fast.log","/var/log/suricata/suricata.log"]
 - module: nginx
   access:
+    enabled: true
     var.paths: ["/var/log/nginx/access.log*"]
   error:
+    enabled: true
     var.paths: ["/var/log/nginx/error.log*"]
 - module: logstash
   log:
@@ -61,6 +63,8 @@ filebeat.inputs:
 #       hints.enabled: true
 setup.ilm.enabled: false 
 ilm.enabled: false 
+setup.template.overwrite: true
+
 
 
 
