@@ -1,0 +1,59 @@
+#==========================  Modules configuration =============================
+
+metricbeat.config.modules:
+   path: /usr/share/auditbeat/modules.d/*.yml
+   reload.enabled: false
+   #reload.period: 10s
+
+metricbeat.modules:
+- module: docker
+  metricsets:
+    - "container"
+    - "cpu"
+    - "diskio"
+    - "event"
+    - "healthcheck"
+    - "info"
+    - "image"
+    - "memory"
+    - "network"
+  hosts: ["unix:///var/run/docker.sock"]
+  period: 10s
+  enabled: true
+
+#==================== Elasticsearch template setting ==========================
+
+setup.index_patterns.settings:
+  index.number_of_shards: 1
+  index.number_of_replicas: 0
+  index.codec: best_compression
+
+setup.template.name: "metricbeat"
+setup.template.pattern: "metricbeat-*"
+setup.template.overwrite: false
+setup.template.settings:
+  index.number_of_shards: 1
+  index.number_of_replicas: 0
+
+#================================ General =====================================
+
+name: siem
+tags: ['metricbeat']
+
+#================================ Outputs =====================================
+
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+
+
+#output.logstash:
+  #hosts: ["logstash:5044"]
+  #ssl.enabled: true
+  #ssl.certificate_authorities: ["/usr/share/metricbeat/ssl/ca.crt"]
+  #ssl.certificate: "/usr/share/metricbeat/ssl/self-client.crt"
+  #ssl.key: "/usr/share/metricbeat/ssl/self-client.key"
+
+#================================ Logging =====================================
+
+#logging.level: debug
+#logging.selectors: ["*"]

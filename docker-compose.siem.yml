@@ -17,7 +17,7 @@ services:
     restart: always
     build: ./SIEM+IDS+IPS/logstash
     volumes: 
-      - ./SIEM+IDS+IPS/var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata:rw
       - ./SIEM+IDS+IPS/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
     networks:
       - tfm
@@ -34,12 +34,11 @@ services:
     depends_on:
       - elasticsearch
   metricbeat:
-    container_name: metricbeat
     image: docker.elastic.co/beats/metricbeat:7.7.0
     # command: --strict.perms=false
     environment:
       - setup.kibana.host=kibana:5601
-      - output.elasticsearch.hosts=["elasticsearch:9200","elasticsearch:9300"]
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
     cap_add:
       - AUDIT_CONTROL
       - AUDIT_READ
@@ -52,24 +51,19 @@ services:
     networks:
       - tfm
   filebeat:
-    container_name: filebeat
-    restart: always
     image: docker.elastic.co/beats/filebeat:7.7.0
+    command: --strict.perms=false
     environment:
       - setup.kibana.host=kibana:5601
-      - output.elasticsearch.hosts=["elasticsearch:9200","elasticsearch:9300"]
-    volumes: 
-      - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./SIEM+IDS+IPS/filebeat/logs/nginx/:/var/log/nginx/
+      - output.elasticsearch.hosts=["elasticsearch:9200"]
+    ports:
+      - 9000:9000
+    volumes:
+      # - ${PWD}/configs/filebeat.docker.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - tfm
-    depends_on:
-      - elasticsearch
-      - kibana
-      - nginx
-    command: filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["elasticsearch:9200"]'
   suricata:
     image: jasonish/suricata:latest
     container_name: suricata
@@ -100,7 +94,6 @@ services:
     image: nginx:alpine
     ports:
       - 9200:9200
-      - 9300:9300
       - 5601:5601
       - 9600:9600
       - 5000:5000

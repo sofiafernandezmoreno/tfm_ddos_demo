@@ -1,14 +1,24 @@
+
+filebeat.config.modules:
+
+  path: /etc/filebeat/modules.d/*.yml
+  reload.enabled: false
+  #reload.period: 10s
+
 filebeat.modules:
 - module: system
   syslog:
     enabled: true
+    var.paths: ["/var/log/syslog*"]
   auth:
     enabled: true
+    var.paths: ["/var/log/auth.log*"]
 - module: iptables
   log:
     enabled: true
     var.paths: ["/var/log/iptables.log"]
     var.input: "file"
+
 - module: suricata
   eve:
     enabled: true
@@ -18,7 +28,22 @@ filebeat.modules:
     var.paths: ["/var/log/nginx/access.log*"]
   error:
     var.paths: ["/var/log/nginx/error.log*"]
-    
+- module: logstash
+  log:
+    enabled: true
+    var.paths: ["/var/log/logstash/logstash-plain.log*"]
+    var.format: json
+  slowlog:
+    enabled: true
+    var.paths: ["/var/log/logstash/logstash-slowlog.log*"]
+    var.format: json
+
+- module: elasticsearch
+  server:
+    enabled: true
+    var.paths:
+      - /var/log/elasticsearch/*.log
+      - /var/log/elasticsearch/*_server.json
 filebeat.inputs:
 - type: docker
   enabled: true
@@ -46,13 +71,13 @@ setup.dashboards:
   enabled: true
 
 # #============================== Kibana =========================================
-# setup.kibana:
-#   host: "kibana:5601"
+setup.kibana:
+  host: "kibana:5601"
 
 # #============================== elasticsearch ========================================= 
 # output.elasticsearch:
 #   hosts: ["192.168.2.76:9200"]
 
 #============================== logstash =========================================
-# output.logstash:
-#       hosts: ["logstash:9600"]
+output.logstash:
+      hosts: ["logstash:9600"]
