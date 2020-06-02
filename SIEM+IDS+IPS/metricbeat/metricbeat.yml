@@ -42,12 +42,12 @@ tags: ['metricbeat']
 
 #================================ Outputs =====================================
 
-output.elasticsearch:
-  hosts: ["elasticsearch:9200"]
+# output.elasticsearch:
+#   hosts: ["elasticsearch:9200"]
 
 
-#output.logstash:
-  #hosts: ["logstash:5044"]
+output.logstash:
+  hosts: ["logstash:5044"]
   #ssl.enabled: true
   #ssl.certificate_authorities: ["/usr/share/metricbeat/ssl/ca.crt"]
   #ssl.certificate: "/usr/share/metricbeat/ssl/self-client.crt"
