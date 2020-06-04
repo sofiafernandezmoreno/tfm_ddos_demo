@@ -61,15 +61,16 @@ filebeat.inputs:
 #       # https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html
 #       # This URL alos contains instructions on multi-line logs
 #       hints.enabled: true
-setup.ilm.enabled: false 
-ilm.enabled: false 
-setup.template.overwrite: true
+# setup.ilm.enabled: false 
+# ilm.enabled: false 
+# setup.template.overwrite: true
+# setup.template.name: "packets"
 
-
-
+setup.template.enabled: false
 
 processors:
-- add_docker_metadata: ~
+- add_docker_metadata:
+    host: "unix:///var/run/docker.sock"
 - add_locale:
     format: offset
 - add_host_metadata:
@@ -78,14 +79,18 @@ processors:
 setup.dashboards:
   enabled: true
 
-# #============================== Kibana =========================================
+# # #============================== Kibana =========================================
 setup.kibana:
   host: "kibana:5601"
+  username: "tfmddos"
+  password: "tfmdd0s2020"
 
-# #============================== elasticsearch ========================================= 
-# output.elasticsearch:
-#   hosts: ["192.168.2.76:9200"]
+# # #============================== elasticsearch ========================================= 
+output.elasticsearch:
+  hosts: ["elasticsearch:9200"]
+  # indices:
+  # - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
 
-#============================== logstash =========================================
-output.logstash:
-      hosts: ["logstash:5044"]
+# #============================== logstash =========================================
+# output.logstash:
+#       hosts: ["logstash:5044"]

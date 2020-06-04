@@ -19,6 +19,7 @@ services:
     volumes: 
       - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata:rw
       - ./SIEM+IDS+IPS/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./SIEM+IDS+IPS/logstash/dist/logstash.template.json:/usr/share/logstash/templates/logstash.template.json
     networks:
       - tfm
     depends_on:
@@ -26,9 +27,9 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:7.7.0
     container_name: kibana
-    environment:
-      SERVER_NAME: localhost
-      ELASTICSEARCH_URL: http://elasticsearch:9200/
+    # environment:
+    #   SERVER_NAME: localhost
+    #   ELASTICSEARCH_URL: http://elasticsearch:9200/
     volumes:
       - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/kibana.yml
       - type: volume
@@ -61,6 +62,7 @@ services:
     networks:
       - tfm
   metricbeat:
+    container_name: metricbeat
     image: docker.elastic.co/beats/metricbeat:7.7.0
     # command: --strict.perms=false
     environment:
@@ -78,10 +80,12 @@ services:
     networks:
       - tfm
   filebeat:
+    container_name: filebeat
     image: docker.elastic.co/beats/filebeat:7.7.0
     command: --strict.perms=false
-    ports:
-      - 9000:9000
+    # environment:
+    # - setup.kibana.host=kibana:5601
+    # - output.elasticsearch.hosts=["elasticsearch:9200"]
     volumes:
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
@@ -113,6 +117,7 @@ services:
       - ./SIEM+IDS+IPS/suricata/configs/update.yaml:/usr/lib/python3.7/site-packages/suricata/update/configs/update.yaml
       - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata
   auditbeat:
+    container_name: auditbeat
     image: docker.elastic.co/beats/auditbeat:7.7.0
     command: auditbeat -e -strict.perms=false
     user: root
@@ -127,6 +132,7 @@ services:
     networks:
       - tfm
   heartbeat:
+    container_name: heartbeat
     image: docker.elastic.co/beats/heartbeat:7.7.0
     command: --strict.perms=false
     environment:
@@ -148,6 +154,8 @@ services:
         - 5601:5601
         - 9200:9200
         - 9600:9600
+        - 9000:9000
+        - 5044:5044
     networks:
         tfm:
             ipv4_address: 192.168.2.76
