@@ -18,6 +18,7 @@ services:
     build: ./SIEM+IDS+IPS/logstash
     volumes: 
       - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata:rw
+      - ./SIEM+IDS+IPS/logstash/dist/GeoLite2-City.mmdb:/usr/share/GeoIP/GeoLite2-City.mmdb
       - ./SIEM+IDS+IPS/logstash/dist/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./SIEM+IDS+IPS/logstash/dist/logstash.template.json:/usr/share/logstash/templates/logstash.template.json
     networks:
@@ -27,9 +28,6 @@ services:
   kibana:
     image: docker.elastic.co/kibana/kibana:7.7.0
     container_name: kibana
-    # environment:
-    #   SERVER_NAME: localhost
-    #   ELASTICSEARCH_URL: http://elasticsearch:9200/
     volumes:
       - ./SIEM+IDS+IPS/kibana/kibana.yml:/usr/share/kibana/kibana.yml
       - type: volume
@@ -87,7 +85,7 @@ services:
     # - setup.kibana.host=kibana:5601
     # - output.elasticsearch.hosts=["elasticsearch:9200"]
     volumes:
-      - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata
+      - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata:rw
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock

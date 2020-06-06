@@ -1,20 +1,19 @@
 # Trabajo Fin de Máster DDoS Attacks
 
-En tal caso ajustamos el parámetro del kernel vm.max_map_count:
-
-
+Antes de comenzar se debe asignar la siguiente configuración, ajustando el parámetro del kernel vm.max_map_count:
+```
 vi /etc/sysctl.conf
 
 vm.max_map_count = 262144
+```
 
+Configuramos Elasticsearch (`/usr/share/elasticsearch/elasticsearch.yml`) para que se envie a todas las interfaces de red y opere en modo mononodo:
 
-Configuramos Elasticsearch para que se bindee a todas las interfaces de red y opere en modo mononodo:
-
-vi /etc/elasticsearch/elasticsearch.yml
+```
 network.host: 0.0.0.0
 discovery.seed_hosts: []
-
-Filtramos el tráfico de red para que solo se tenga acceso al Elasticsearch desde Logstash y Kibana:
+```
+Filtramos el tráfico de red para que solo se tenga acceso al **Elasticsearch** desde **Logstash** y **Kibana**:
 
 
 ```
@@ -44,28 +43,8 @@ Borrar información de la orquestación
 ```console
 $ ./script down
 ```
-La ejecución del script tendrá la unificación de dos orquestaciones de contenedores, realizando la tarea de unificar la estructura de **SIEM** junto a la del **WAF** y la instalación del **WordPress** junto su **WebServer**.
+La ejecución del script tendrá la unificación de cuatro orquestaciones de contenedores, realizando la tarea de unificar la estructura del **FIREWALL** y **SIEM+IDS+IPS** junto a la del **WAF** y la instalación del **WordPress** junto su **WebServer**, todas desde la misma subred.
 ```
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml up -d
-```
-
-### Creación de un index pattern via Kibana API
-```console
-curl -XPOST -D- 'http://192.168.2.76:5601/api/saved_objects/index-pattern' \
-    -H 'Content-Type: application/json' \
-    -H 'kbn-version: 7.7.0' \
-    -d '{"attributes":{"title":"logstash-*","timeFieldName":"@timestamp"}}' \
--u 'tfmddos:tfmdd0s2020'
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
 ```
 
-### IPTABLES
-TCP_PORTS: A list of TCP Ports which we should accept all traffic to
-HOSTS: A list of hosts for which we should accept all traffic
-
-any other traffic is DROPped.
-
-example usage:
-
-```
-$ docker run --name firewall -e TCP_PORTS=22 -e HOSTS=172.12.1.1/32 --rm -ti --cap-add=NET_ADMIN iptables
-```
