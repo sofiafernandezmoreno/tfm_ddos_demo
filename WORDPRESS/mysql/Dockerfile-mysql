@@ -1,5 +1,5 @@
 FROM mysql:5.7
-
+MAINTAINER sfernandez
 ADD my.cnf /etc/mysql/my.cnf
 ADD ca-cert.pem /etc/mysql-ssl/ca-cert.pem
 ADD server-cert.pem /etc/mysql-ssl/server-cert.pem

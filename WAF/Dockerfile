@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+MAINTAINER sfernandez
 RUN apt-get update && \
 	apt-get install -y git wget build-essential libpcre3 libpcre3-dev libssl-dev libtool autoconf apache2-dev libxml2-dev libcurl4-openssl-dev automake pkgconf && \
 	cd /usr/src/ && \

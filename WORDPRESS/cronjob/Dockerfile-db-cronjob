@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-
+MAINTAINER sfernandez
 RUN apt-get update && apt-get -y install cron mysql-client
 
 RUN touch /var/log/cron.log
