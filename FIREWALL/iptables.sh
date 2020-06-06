@@ -16,7 +16,8 @@ for port in ${TCP_PORTS//,/ }; do
 done
 
 for host in ${HOSTS//,/ }; do
-  # echo Firewall rules docker
+  echo Firewall rules docker
+  iptables -I DOCKER-USER -i eth0 ! -s 127.0.0.1 -j DROP
   # iptables -I DOCKER-USER -i ${INTERFACE} ! -d 192.168.2.0/24 -j DROP 
   # iptables -I DOCKER-USER -i ${INTERFACE} -p tcp --sport 443 -j ACCEPT 
   # iptables -I DOCKER-USER -i ${INTERFACE} -p udp --dport 53 -j ACCEPT 

@@ -37,6 +37,11 @@ net.netfilter.nf_conntrack_tcp_timeout_syn_sent = 20
 net.netfilter.nf_conntrack_tcp_timeout_time_wait = 10 
 ```
 
+
+### Docker IPTABLES
+```
+iptables -I DOCKER-USER -i eth0 ! -s 127.0.0.1 -j DROP
+```
 ### Bloquear paquetes inválidos
 Lo primero es bloquear todos los paquetes inválidos, es decir, aquellos que no sean paquetes SYN (de establecimiento de conexión) y que tampoco pertenezcan a ninguna conexión activa:
 
