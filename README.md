@@ -169,6 +169,70 @@ docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-co
 ```
 
 ## WORDPRESS
+### Load balancer and web server
+
+
+Configuración del acelerador NGINX Throttle
+Utilice el módulo 'limit_req' para limitar las solicitudes excesivas de una IP o un URI específico, por ejemplo, procesar 100 solicitudes por segundo de una IP.
+```
+# throttle setting example
+limit_req_zone $binary_remote_addr zone=by_ip:10m rate=200r/s;
+limit_req_zone $request_uri zone=by_uri:10m rate=200r/s;
+
+# limit_req_zone : Declare a zone to limit the request
+# binary_remote_addr : Client IP based limit
+# request_uri : URI based limit
+# share memory assign : 10M
+# rate : If there are more than 200 requests per second, further requests will be limited
+```
+Luego, usamos la directiva `limit_req` para limitar la velocidad de las conexiones a una ubicación o archivo en particular.
+
+```
+location / {
+    proxy_pass         http://wordpress:80;
+    proxy_redirect     off;
+    limit_req zone=one;
+
+}
+```
+Ajustaremos gradualmente el proceso de trabajo y las conexiones de trabajo a un valor más alto o más bajo para manejar los ataques DDoS.
+```
+events { 
+    worker_connections 50000; 
+}
+ ```
+
+
+Las conexiones lentas pueden representar un intento de mantener las conexiones abiertas durante mucho tiempo. Como resultado, el servidor no puede aceptar nuevas conexiones.
+
+La directiva `client_body_timeout` define cuánto tiempo espera Nginx entre las escrituras del cuerpo del cliente y  `client_header_timeout` significa cuánto tiempo Nginx espera entre las escrituras del encabezado del cliente. Ambos están configurados en 5 segundos.
+
+```
+client_body_timeout 5s;
+client_header_timeout 5s;
+```
+#### Limitar el tamaño de las solicitudes
+Los grandes valores de búfer o el gran tamaño de las solicitudes HTTP facilitan los ataques DDoS. Por lo tanto, limitamos los siguientes valores de búfer en el archivo de configuración de Nginx para mitigar los ataques DDoS.
+```
+client_body_buffer_size 200K;
+client_header_buffer_size 2k;
+client_max_body_size 200k;
+large_client_header_buffers 3 1k;
+```
+Con `deny` denegamos la IP de la cual podemos identificar el ataque.
+```
+deny 192.168.1.103
+```
+
+Cuando se utiliza Nginx como balanceador de carga, es posible ajustar los parámetros para limitar el número de conexiones para cada servidor:
+```
+upstream wordpress-web {
+    server 192.168.2.56:80 max_conns=100;
+    queue 20 timeout=10s;
+}
+```
+Aquí la directiva `max_conns` especifica el número de conexiones que Nginx puede abrir para el servidor. La directiva de `queue` limita el número de solicitudes que se han puesto en cola cuando todos los servidores de este grupo han alcanzado el límite de conexión. Finalmente, la directiva de `timeout` especifica cuánto tiempo se puede retener una solicitud en la cola.
+
 Activamos en el archivo `wp-config.php`
 ```
 define( 'WP_DEBUG', true );
