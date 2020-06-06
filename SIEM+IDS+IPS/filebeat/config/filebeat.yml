@@ -1,96 +1,20 @@
+filebeat:
+  # List of prospectors to fetch data.
+  inputs:
+    # Each - is a prospector. Below are the prospector specific configurations
+    - type: log 
+      enabled: true
+      # Paths that should be crawled and fetched. Glob based paths.
+      # To fetch all ".log" files from a specific level of subdirectories
+      # /var/log/*/*.log can be used.
+      # For each file found under this path, a harvester is started.
+      # Make sure not file is defined twice as this can lead to unexpected behaviour.
+      paths:
+       # - /var/log/*.log
+         - /var/log/suricata/eve.json
 
-filebeat.config.modules:
+  fields:
+    event.type: suricata
 
-  path: /usr/share/filebeat/modules.d/*.yml
-  reload.enabled: true
-  #reload.period: 10s
-
-filebeat.modules:
-- module: system
-  syslog:
-    enabled: true
-    var.paths: ["/var/log/syslog*"]
-  auth:
-    enabled: true
-    var.paths: ["/var/log/auth.log*"]
-- module: iptables
-  log:
-    enabled: true
-    var.paths: ["/var/log/iptables.log"]
-    var.input: "file"
-
-- module: suricata
-  eve:
-    enabled: true
-    var.paths: ["/var/log/suricata/fast.log","/var/log/suricata/suricata.log"]
-- module: nginx
-  access:
-    enabled: true
-    var.paths: ["/var/log/nginx/access.log*"]
-  error:
-    enabled: true
-    var.paths: ["/var/log/nginx/error.log*"]
-- module: logstash
-  log:
-    enabled: true
-    var.paths: ["/var/log/logstash/logstash-plain.log*"]
-    var.format: json
-  slowlog:
-    enabled: true
-    var.paths: ["/var/log/logstash/logstash-slowlog.log*"]
-    var.format: json
-
-- module: elasticsearch
-  server:
-    enabled: true
-    var.paths:
-      - /var/log/elasticsearch/*.log
-      - /var/log/elasticsearch/*_server.json
-filebeat.inputs:
-- type: docker
-  enabled: true
-  containers:
-    stream: all # can be all, stdout or stderr
-    ids:
-      - '*'
-#========================== Filebeat autodiscover ==============================
-# See this URL on how to run Apache2 Filebeat module: # https://www.elastic.co/guide/en/beats/filebeat/current/running-on-docker.html
-# filebeat.autodiscover:
-#   providers:
-#     - type: docker
-#       # https://www.elastic.co/guide/en/beats/filebeat/current/configuration-autodiscover-hints.html
-#       # This URL alos contains instructions on multi-line logs
-#       hints.enabled: true
-# setup.ilm.enabled: false 
-# ilm.enabled: false 
-# setup.template.overwrite: true
-# setup.template.name: "packets"
-
-setup.template.enabled: false
-
-processors:
-- add_docker_metadata:
-    host: "unix:///var/run/docker.sock"
-- add_locale:
-    format: offset
-- add_host_metadata:
-    netinfo.enabled: true
-#============================== Dashboards =====================================
-setup.dashboards:
-  enabled: true
-
-# # #============================== Kibana =========================================
-setup.kibana:
-  host: "kibana:5601"
-  username: "tfmddos"
-  password: "tfmdd0s2020"
-
-# # #============================== elasticsearch ========================================= 
-output.elasticsearch:
-  hosts: ["elasticsearch:9200"]
-  # indices:
-  # - index: "filebeat-%{[agent.version]}-%{+yyyy.MM.dd}"
-
-# #============================== logstash =========================================
-# output.logstash:
-#       hosts: ["logstash:5044"]
+output.logstash:
+        hosts: ["logstash:5044"]
