@@ -5,6 +5,8 @@ services:
         build: WAF
         ports:
             - "80:80"
+        volumes: 
+            - ./WAF/var/log:/var/log/
         networks:
             tfm:
                 ipv4_address: 192.168.2.66
