@@ -163,3 +163,9 @@ La ejecución del script tendrá la unificación de cuatro orquestaciones de con
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
 ```
 
+## WORDPRESS
+Activamos en el archivo `wp-config.php`
+```
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+```

@@ -96,7 +96,7 @@ services:
     container_name: suricata
     restart: always
     command:
-      - '-i eth0'
+      - '-i docker0'
     cap_add:
       - NET_ADMIN
       - SYS_NICE
