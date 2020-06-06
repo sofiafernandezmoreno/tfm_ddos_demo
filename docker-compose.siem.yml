@@ -86,6 +86,7 @@ services:
     # - output.elasticsearch.hosts=["elasticsearch:9200"]
     volumes:
       - ./SIEM+IDS+IPS/suricata/var/log/suricata:/var/log/suricata:rw
+      - ./WORDPRESS/website/wp-config.php:/var/www/html/wp-config.php
       - ./SIEM+IDS+IPS/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/run/docker.sock:/var/run/docker.sock
