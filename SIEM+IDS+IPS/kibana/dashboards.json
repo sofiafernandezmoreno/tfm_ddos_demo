@@ -5,7 +5,7 @@
       "_source": {
         "title": "Suricata",
         "hits": 0,
-        "description": "pfSense Dashboard",
+        "description": "Suricata Dashboard",
         "panelsJSON": "[{\"panelIndex\":\"7\",\"gridData\":{\"x\":25,\"y\":0,\"w\":23,\"h\":25,\"i\":\"7\"},\"embeddableConfig\":{\"mapCenter\":[37.782941450067156,8.68909996468574],\"mapZoom\":1},\"id\":\"fcdc1200-7e29-11e8-b267-4d1688b0bab4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":8,\"y\":0,\"w\":17,\"h\":25,\"i\":\"10\"},\"embeddableConfig\":{},\"id\":\"df49d9e0-7e2c-11e8-b267-4d1688b0bab4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":25,\"w\":25,\"h\":22,\"i\":\"11\"},\"embeddableConfig\":{\"mapCenter\":[52.482780222078226,1.40625],\"mapZoom\":1},\"id\":\"135aae00-7e30-11e8-b267-4d1688b0bab4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":25,\"y\":25,\"w\":23,\"h\":22,\"i\":\"12\"},\"embeddableConfig\":{},\"id\":\"e5b1e0d0-7e30-11e8-b267-4d1688b0bab4\",\"type\":\"visualization\",\"version\":\"6.3.0\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":0,\"w\":8,\"h\":25,\"i\":\"13\"},\"version\":\"6.3.0\",\"type\":\"visualization\",\"id\":\"7a16cea0-7e3d-11e8-a400-fb1b13f7ba25\",\"embeddableConfig\":{}}]",
         "optionsJSON": "{\"darkTheme\":true,\"useMargins\":false}",
         "version": 1,

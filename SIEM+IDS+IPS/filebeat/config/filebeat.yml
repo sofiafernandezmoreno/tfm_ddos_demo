@@ -1,4 +1,5 @@
 filebeat:
+  
   # List of prospectors to fetch data.
   inputs:
     # Each - is a prospector. Below are the prospector specific configurations
@@ -12,9 +13,19 @@ filebeat:
       paths:
        # - /var/log/*.log
          - /var/log/suricata/eve.json
+    -
+     paths:
+       - /var/www/html/wordpress/wp-content/debug.log
+     fields:
+       logzio_codec: plain
+       token: tWMKrePSAcfaBSTPKLZeEXGCeiVMpuHb
+     fields_under_root: true
+     ignore_older: 24h
+     document_type: WP
 
   fields:
     event.type: suricata
 
-output.logstash:
+output:
+  logstash:
         hosts: ["logstash:5044"]
