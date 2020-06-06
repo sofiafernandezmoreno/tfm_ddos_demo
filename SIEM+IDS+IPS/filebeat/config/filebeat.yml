@@ -1,5 +1,8 @@
 filebeat:
-  
+  config.modules:
+    path: /usr/share/filebeat/modules.d/*.yml
+    reload.enabled: true
+
   # List of prospectors to fetch data.
   inputs:
     # Each - is a prospector. Below are the prospector specific configurations
@@ -22,6 +25,9 @@ filebeat:
      fields_under_root: true
      ignore_older: 24h
      document_type: WP
+    - type: container
+      paths:
+        - '/var/lib/docker/containers/*/*.log'
 
   fields:
     event.type: suricata

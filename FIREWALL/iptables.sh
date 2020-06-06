@@ -2,6 +2,7 @@
 
 declare -a TCP_PORTS=22
 declare -a HOSTS=192.168.2.0/24
+# readonly eth="br-$(docker network ls | grep tfm_ddos_demo_tfm | awk '{print $1}')"
 
 iptables -P INPUT ACCEPT
 iptables -F
@@ -15,6 +16,10 @@ for port in ${TCP_PORTS//,/ }; do
 done
 
 for host in ${HOSTS//,/ }; do
+  # echo Firewall rules docker
+  # iptables -I DOCKER-USER -i ${INTERFACE} ! -d 192.168.2.0/24 -j DROP 
+  # iptables -I DOCKER-USER -i ${INTERFACE} -p tcp --sport 443 -j ACCEPT 
+  # iptables -I DOCKER-USER -i ${INTERFACE} -p udp --dport 53 -j ACCEPT 
   echo Block invalid packets
   iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
   echo Block new packets != SYN

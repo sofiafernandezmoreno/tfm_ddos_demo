@@ -169,3 +169,27 @@ Activamos en el archivo `wp-config.php`
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 ```
+
+
+
+
+```
+docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq) 
+
+/proxy_wordpress - 192.168.2.56
+/wordpress - 192.168.2.11
+/db_backup - 192.168.2.10
+/logstash - 192.168.2.9
+/suricata - 
+/auditbeat - 192.168.2.7
+/metricbeat - 192.168.2.8
+/heartbeat - 192.168.2.6
+/iptables - 192.168.2.86
+/kibana - 192.168.2.5
+/elasticsearch - 192.168.2.4
+/filebeat - 192.168.2.2
+/db_wordpress - 192.168.2.3
+/waf - 192.168.2.66
+/load_balancer_monitoring - 192.168.2.76
+
+```
