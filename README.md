@@ -167,6 +167,21 @@ La ejecución del script tendrá la unificación de cuatro orquestaciones de con
 ```
 docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
 ```
+## WAF
+La naturaleza de los contenedores dificulta el uso de un UTM como se realizaba anteriormente, porque las cargas de los contenedores son portátiles y elásticas. Del mismo modo, las cargas de contenedores también se están trasladando a la nube.
+
+Un **firewall de aplicaciones web** `(WAF)` es un firewall diseñado específicamente para proteger contra ataques comunes a las aplicaciones web. Uno de los WAF más utilizados es **ModSecurity**. 
+
+Los archivos están configurados con la configuración predeterminada.
+
+* `nginx.conf` : este es el archivo de configuración de NGINX que contiene las directivas para el equilibrio de carga y el proxy inverso.
+La línea 44 comienza la sección sobre habilitar y deshabilitar ModSecurity
+La línea 52 inicia la sección para configurar el proxy inverso. Para Docker, este suele ser el nombre del contenedor que está siendo presentado por la aplicación. La línea 53 contiene la URL interna que nginx está representando.
+
+* `modsecurity.conf` : contiene la configuración de modsecurity y alguna configuración para los valores predeterminados y la exclusión de las reglas utilizadas por mod security. Casi todo lo que se encuentra en el archivo modsecurity.conf se puede dejar como está. La línea 230 inicia la configuración de las reglas.
+Las reglas se descargan e instalan (`/usr/local/nginx/conf/rules`) cuando se construye el contenedor. Las reglas individuales se pueden deshabilitar o habilitar, o todas se pueden habilitar.
+
+* `crs-setup.conf `: esto configura las reglas utilizadas por ModSecurity. El archivo tiene documentación integrada. 
 
 ## WORDPRESS
 ### Load balancer and web server
@@ -228,10 +243,9 @@ Cuando se utiliza Nginx como balanceador de carga, es posible ajustar los parám
 ```
 upstream wordpress-web {
     server 192.168.2.56:80 max_conns=100;
-    queue 20 timeout=10s;
 }
 ```
-Aquí la directiva `max_conns` especifica el número de conexiones que Nginx puede abrir para el servidor. La directiva de `queue` limita el número de solicitudes que se han puesto en cola cuando todos los servidores de este grupo han alcanzado el límite de conexión. Finalmente, la directiva de `timeout` especifica cuánto tiempo se puede retener una solicitud en la cola.
+Aquí la directiva `max_conns` especifica el número de conexiones que Nginx puede abrir para el servidor. 
 
 Activamos en el archivo `wp-config.php`
 ```
@@ -262,3 +276,5 @@ docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}
 /load_balancer_monitoring - 192.168.2.76
 
 ```
+
+
