@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TCP_PORTS=${TCP_PORTS:-""}
-HOSTS=${HOSTS:-""}
+declare -a TCP_PORTS=22
+declare -a HOSTS=192.168.2.0/24
 
 iptables -P INPUT ACCEPT
 iptables -F
@@ -15,6 +15,8 @@ for port in ${TCP_PORTS//,/ }; do
 done
 
 for host in ${HOSTS//,/ }; do
+  echo Block invalid packets
+  iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
   echo Allowing traffic from ${host}
   iptables -A INPUT -p tcp -s ${host} -m state --state NEW,ESTABLISHED -j ACCEPT
 done
