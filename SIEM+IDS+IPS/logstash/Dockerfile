@@ -3,5 +3,5 @@ MAINTAINER sfernandez
 ADD dist/ /home/dist
 
 RUN cd /home/dist/ && \
-    cp logstash.conf /opt/logstash/pipeline/logstash.conf 
+    cp logstash.conf /usr/share/logstash/pipeline/logstash.conf 
     #chmod 775 /var/log/suricata/eve.json
