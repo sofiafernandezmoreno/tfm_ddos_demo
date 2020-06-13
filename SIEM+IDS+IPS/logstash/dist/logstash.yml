@@ -10,3 +10,4 @@ path.config: /usr/share/logstash/pipeline
 # ## X-Pack security credentials
 # #
 # xpack.monitoring.enabled: true
+xpack.monitoring.collection.enabled: true
