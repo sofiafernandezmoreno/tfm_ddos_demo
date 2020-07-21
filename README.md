@@ -1,6 +1,6 @@
 # Trabajo Fin de Máster DDoS Attacks
 
-Antes de comenzar se debe asignar la siguiente configuración, ajustando el parámetro del kernel vm.max_map_count:
+Antes de comenzar se debe asignar la siguiente configuración, ajustando el parámetro del kernel `vm.max_map_count`:
 ```
 vi /etc/sysctl.conf
 
@@ -150,23 +150,6 @@ iptables -I INPUT 1 -p tcp --dport 5044 -j DROP
 iptables -I INPUT 1 -p tcp --dport 5044 -s KIBANASERVER -j ACCEPT
 ```
 
-## Ejecución de script para ejecutar la orquestación de contenedores
-Lanzar la orquestación
-```console
-$ ./script up
-```
-Parar la orquestación
-```console
-$ ./script stop
-```
-Borrar información de la orquestación
-```console
-$ ./script down
-```
-La ejecución del script tendrá la unificación de cuatro orquestaciones de contenedores, realizando la tarea de unificar la estructura del **FIREWALL** y **SIEM+IDS+IPS** junto a la del **WAF** y la instalación del **WordPress** junto su **WebServer**, todas desde la misma subred.
-```
-docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
-```
 ## WAF
 La naturaleza de los contenedores dificulta el uso de un UTM como se realizaba anteriormente, porque las cargas de los contenedores son portátiles y elásticas. Del mismo modo, las cargas de contenedores también se están trasladando a la nube.
 
@@ -278,3 +261,26 @@ docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}
 ```
 
 
+
+
+# Ejecución de script para ejecutar la orquestación de contenedores
+Lanzar la orquestación
+```console
+$ ./script up
+```
+Parar la orquestación
+```console
+$ ./script stop
+```
+Borrar información de la orquestación
+```console
+$ ./script down
+```
+La ejecución del script tendrá la unificación de cuatro orquestaciones de contenedores, realizando la tarea de unificar la estructura del **FIREWALL** y **SIEM+IDS+IPS** junto a la del **WAF** y la instalación del **WordPress** junto su **WebServer**, todas desde la misma subred.
+```
+docker-compose -f docker-compose.siem.yml -f docker-compose.waf.yml -f docker-compose.iptables.yml -f docker-compose.wordpress.yml up -d
+```
+Ejecución del ataque
+```console
+$ ./script attack
+```
