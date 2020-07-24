@@ -1,0 +1,7 @@
+*.sql linguist-detectable=true
+*.yaml linguist-detectable=true
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+*.java linguist-detectable=false
+*.php linguist-detectable=false
+
