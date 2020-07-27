@@ -6,7 +6,7 @@ If you like this project and want to support it, you can contribute to the proje
 
 You can ask any question, suggestion or complaint at the project's on Gmail (tfmddos@gmail.com).
 
-Thanks to all project's [contributors]!
+Thanks to all project's!
 ## License
 
 The project is licensed under the [MIT License]. This license lets you use the source for free or
