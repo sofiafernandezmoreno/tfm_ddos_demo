@@ -20,4 +20,4 @@ commercial purposes as long as you provide attribution and don’t hold any proj
 
 [<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><br /><sub><b>Vicente Gaitán Garrido</b></sub>]()<br /> 
 
-[GNU GPLv3]: license.md
+[GNU GPLv3]: LICENSE
