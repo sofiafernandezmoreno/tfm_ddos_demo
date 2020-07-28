@@ -4,7 +4,8 @@ SME business continuity project applying resilience to DDoS UDP Flood attacks (n
 
 If you like this project and want to support it, you can contribute to the project 
 
-You can ask any question, suggestion or complaint at the project's on Gmail (tfmddos@gmail.com).
+You can ask any question, suggestion or complaint at the project's reach out to us at the next place:
+- E-Mail: **tfmddos@gmail.com**
 
 Thanks to all project's!
 ## License
