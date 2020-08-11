@@ -1,3 +1,5 @@
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 # TFM DDoS Attacks
 SME business continuity project applying resilience to DDoS UDP Flood attacks (new version to a different attack) with docker containers
 ## Contribute
