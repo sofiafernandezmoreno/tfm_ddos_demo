@@ -17,9 +17,9 @@ The project is licensed under the [GNU GPLv3]. This license lets you use the sou
 commercial purposes as long as you provide attribution and don’t hold any project member liable.
 
 ## Authors
-[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQFIHPM0YOAWAA/profile-displayphoto-shrink_100_100/0?e=1601510400&v=beta&t=4mjK1CXjX10nTWdsDoXHRXg22_oNYXEhgB3oQ3lgWRU" width="100px;"/><br /><sub><b>Sofía Fernández Moreno</b></sub>](http://sofiafernandezmoreno.github.io/)<br /> 
+[<img src="https://media-exp1.licdn.com/dms/image/C4D03AQFIHPM0YOAWAA/profile-displayphoto-shrink_100_100/0?e=1601510400&v=beta&t=4mjK1CXjX10nTWdsDoXHRXg22_oNYXEhgB3oQ3lgWRU" style="max-width:100%;border-radius:50%" width="100px;"/><br /><sub><b>Sofía Fernández Moreno</b></sub>](http://sofiafernandezmoreno.github.io/)<br /> 
 
-[<img src="https://media-exp1.licdn.com/dms/image/C5603AQHlt9i9HTaD1A/profile-displayphoto-shrink_200_200/0?e=1601510400&v=beta&t=W5X2m2LzLjOG6ty83AqMA5VLFsJ1FaVJT9ha5B8xDa4" width="100px;"/><br /><sub><b>Álvaro Monforte de la Huerga</b></sub>]()
+[<img src="https://media-exp1.licdn.com/dms/image/C5603AQHlt9i9HTaD1A/profile-displayphoto-shrink_200_200/0?e=1601510400&v=beta&t=W5X2m2LzLjOG6ty83AqMA5VLFsJ1FaVJT9ha5B8xDa4" style="max-width:100%;border-radius:50%" width="100px;" style="max-width:100%;border-radius:50%;"/><br /><sub><b>Álvaro Monforte de la Huerga</b></sub>]()
 
 
 [<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/><br /><sub><b>Vicente Gaitán Garrido</b></sub>]()<br /> 
